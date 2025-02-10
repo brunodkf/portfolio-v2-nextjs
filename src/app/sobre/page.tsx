@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-export const page = () => {
+export default function Sobre(){
     return (
         <main className="home container w-full h-svh flex items-center justify-center">
             <Image src='/hex.svg' alt="Hexágono" className="md:w-[50%]" width={100} height={100}/>
@@ -16,5 +16,3 @@ export const page = () => {
         </main>
     )
 }
-
-export default page
