@@ -5,6 +5,7 @@ import "./globals.css";
 import { Navbar } from "./components/Navbar";
 import MenuLateral from "./components/MenuLateral";
 import SocialLateral from "./components/SocialLateral";
+import Footer from "./components/Footer";
 
 const inter = Inter({
   subsets: ['latin']
@@ -23,11 +24,12 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${inter.className} antialiased bg-dark-global flex items-center justify-center relative`}
+        className={`${inter.className} antialiased bg-dark-global flex flex-col items-center justify-center relative`}
       >
+
         <Navbar />
 
-        <section className="container flex relative">
+        <section className="midContent container flex relative">
           <MenuLateral />
 
           {children}
@@ -35,6 +37,8 @@ export default function RootLayout({
           <SocialLateral />
         </section>
 
+
+        <Footer />
 
       </body>
     </html>

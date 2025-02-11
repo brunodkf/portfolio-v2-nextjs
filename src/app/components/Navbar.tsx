@@ -8,7 +8,7 @@ import { MdMenu } from "react-icons/md";
 
 export const Navbar = () => {
     return (
-        <div className="navbar w-full z-50 absolute top-0 px-4 sm:px-0 ">
+        <header className="navbar w-full z-50 absolute top-0 px-4 sm:px-0">
             <nav className='navbar__container container m-auto py-6 flex items-center justify-between' id="navbar">
                 <Image src='/logo.webp' alt="Logo Image" className="max-w-16" width={100} height={50} />
 
@@ -26,7 +26,7 @@ export const Navbar = () => {
                 </div>
             </nav>
 
-        </div>
+        </header>
     )
 }
 

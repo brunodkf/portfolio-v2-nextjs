@@ -16,7 +16,7 @@ const MenuLateral = () => {
   return (
     <aside className="w-28 flex flex-col justify-center items-center fixed h-full  text-white z-50
      ">
-      <ul className="space-y-2 tec">
+      <ul className="space-y-2 line">
         {menuItems.map((item, index) => (
           <motion.li
             key={index}

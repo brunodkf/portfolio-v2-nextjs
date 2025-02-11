@@ -26,10 +26,10 @@ export default {
           background: 'radial-gradient(circle, #2c2c2c, #282828, #252525, #212121, #1e1e1e);'
         },
 
-        '.tec': {
+        '.line': {
           position: 'relative'
         },
-        '.tec:before':{
+        '.line:before':{
           content: '""',
           position: 'absolute',
           display: 'block',
@@ -40,7 +40,7 @@ export default {
           borderRadius: '10%',
           opacity: '.7'
         },
-        '.tec:after':{
+        '.line:after':{
           content: '""',
           position: 'absolute',
           display: 'block',
