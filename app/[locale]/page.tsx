@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import hex from '../../public/hex.svg'
+import {useTranslations} from 'next-intl';
+import {Link} from '@/i18n/routing';
 
 import { Antonio } from 'next/font/google';
 
@@ -12,6 +12,9 @@ const antonio = Antonio({
 });
 
 export default function  Home() {
+
+  const t = useTranslations('HomePage')
+  
   return (
     <main className="home container w-full h-svh flex items-center justify-center">
 
@@ -45,7 +48,7 @@ export default function  Home() {
 
         <div className={`${antonio.className} absolute inset-0 text-branco flex flex-col items-center justify-center`}>
           <h1 className="text-center text-[102px] leading-[100px] ">BRUNO <br /> FURTADO</h1>
-          <p className="mt-4">Desenvolvedor Frontend | UX / UI Designer</p>
+          <p className="mt-4">{t("Subtitle")}</p>
         </div>
       </div>
 

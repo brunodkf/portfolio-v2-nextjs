@@ -1,0 +1,17 @@
+{
+  "HomePage": {
+    "Subtitle": "Desenvolvedor Frontend | UX / UI Designer"
+  },
+  "Navbar":{
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "resume": "Resumo",
+    "experience": "Experiência",
+    "contact": "Contato"
+  },
+  "About":{
+    "Title": "Sobre",
+    "Description": " Durante minha carreira, tive a oportunidade de trabalhar em diversos projetos desafiadores que me permitiram aprimorar minhas habilidades técnicas e de comunicação. Minha experiência inclui o desenvolvimento de interfaces de usuário altamente responsivas e intuitivas, utilizando as mais recentes práticas e tecnologias do mercado e também a aplicação de testes automatizamos assegurando a qualidade de software."
+  }
+}

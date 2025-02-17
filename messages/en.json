@@ -1,0 +1,17 @@
+{
+  "HomePage": {
+    "Subtitle": "Frontend Developer | UX / UI Designer"
+  },
+  "Navbar":{
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "resume": "Resume",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "About":{
+    "Title": "About",
+    "Description": " Throughout my career, I have had the opportunity to work on various challenging projects that have allowed me to enhance my technical and communication skills. My experience includes developing highly responsive and intuitive user interfaces, utilizing the latest industry practices and technologies, as well as implementing automated testing to ensure software quality."
+  }
+}
