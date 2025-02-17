@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 
 import "./globals.css";
+
 import { Navbar } from "./components/Navbar";
 import MenuLateral from "./components/MenuLateral";
 import SocialLateral from "./components/SocialLateral";
@@ -21,21 +22,18 @@ export const metadata: Metadata = {
   description: "Transformo código em experiências incríveis! Sou um dev front-end apaixonado por design e interatividade. Veja meus projetos!",
 };
 
-
-
-
 export default async function RootLayout({
   children,
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string }
+  params: { locale: string };
 }>) {
+  
+  const awaitedParams = await params;
+  const { locale } = awaitedParams;
 
-  const locale = params.locale;
-
-
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
     notFound();
   }
 
@@ -57,4 +55,3 @@ export default async function RootLayout({
     </html>
   );
 }
-
