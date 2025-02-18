@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { IoEarthOutline } from "react-icons/io5";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
@@ -10,20 +10,26 @@ import { MdMenu } from "react-icons/md";
 
 
 import { Link, usePathname, useRouter } from '@/i18n/routing';
+import { useParams } from 'next/navigation';
 
 export const Navbar = () => {
 
     const pathname = usePathname();
-    const router = useRouter()
+    const router = useRouter();
+    const params = useParams();
+    const locale = params.locale as 'pt' | 'en';
 
-    const [language, setLanguage] = useState('pt');
+    const [language, setLanguage] = useState<'pt' | 'en'>(locale);
 
-    function ToggleLanguage(){
-        const newLanguage = language === 'pt' ? 'en' : 'pt';
-        setLanguage(newLanguage)
+    useEffect(() => {
+        setLanguage(locale);
+    }, [locale]);
 
-       return  router.push(pathname, { locale: newLanguage })
+    function ToggleLanguage(i : string){
+        const newLanguage = i === 'pt' ? 'en' : 'pt' ; ;
+        router.push(pathname, { locale: newLanguage })
     }
+
 
     return (
         <header className="navbar w-full z-50 absolute top-0 px-4 sm:px-0">
@@ -31,18 +37,17 @@ export const Navbar = () => {
                 <Image src='/logo.webp' alt="Logo Image" className="max-w-16" width={100} height={50} />
 
                 <div className="flex gap-3">
-
-                    <button className='text-laranja flex items-center' onClick={ToggleLanguage }>
+                    <button className='text-laranja flex items-center' onClick={ () => ToggleLanguage(language) }  aria-label="Toggle language">
                         <IoEarthOutline className='text-xl mr-1' />
-                        <p>PT</p>
+                        <p className='uppercase'>{language}</p>
                         <MdOutlineKeyboardArrowDown />
                     </button>
 
-                    <button className='hidden sm:block bg-laranja rounded-full w-12 px-1'>
+                    <button className='hidden sm:block bg-laranja rounded-full w-12 px-1'  aria-label="Toggle Theme">
                         <HiSun className='bg-preto text-laranja rounded-full text-xl' />
                     </button>
 
-                    <MdMenu className='sm:hidden text-laranja text-4xl' />
+                    <MdMenu className='sm:hidden text-laranja text-4xl'  aria-label="Open Menu" />
                 </div>
             </nav>
 

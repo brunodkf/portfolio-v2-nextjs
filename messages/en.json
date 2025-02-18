@@ -12,6 +12,12 @@
   },
   "About":{
     "Title": "About",
+    "CardTitle1": "Web Development",
+    "CardDescription1": "Production of dynamic and responsive websites",
+    "CardTitle2": "UX/UI Design",
+    "CardDescription2": "Wireframes and prototypes to represent the digital product",
+    "CardTitle3": "SEO",
+    "CardDescription3": "Performance, search positioning and best practices",
     "Description": " Throughout my career, I have had the opportunity to work on various challenging projects that have allowed me to enhance my technical and communication skills. My experience includes developing highly responsive and intuitive user interfaces, utilizing the latest industry practices and technologies, as well as implementing automated testing to ensure software quality."
   }
 }

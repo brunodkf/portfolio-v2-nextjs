@@ -20,6 +20,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Bruno Furtado",
   description: "Transformo código em experiências incríveis! Sou um dev front-end apaixonado por design e interatividade. Veja meus projetos!",
+  icons: {
+    icon: "/favicon.ico", 
+  },
 };
 
 export default async function RootLayout({
