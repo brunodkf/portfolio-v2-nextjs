@@ -65,10 +65,10 @@ export const Navbar = () => {
                         <MdOutlineKeyboardArrowDown />
                     </button>
 
-                    <button className='toggle-container hidden '
+                    <button className='toggle-container'
                         style={{
                             ...container,
-                            justifyContent: "flex-" + (isOn ? "start" : "end"),
+                            justifyContent: "flex-" + (isOn ? "end" : "start"),
                         }}  onClick={toggleSwitch} aria-label="Toggle Theme">
 
                         <motion.div className="toggle-handle"
