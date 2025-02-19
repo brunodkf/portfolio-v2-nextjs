@@ -9,7 +9,7 @@ const menuItems = [
   { name: 'home', path: `/` },
   { name: 'about', path: '/sobre' },
   { name: 'projects', path: '/projetos' },
-  { name: 'resume', path: '/resumo' },
+  { name: 'resume', path: '/docs/BrunoCurriculo.pdf' },
   { name: 'experience', path: '/experiencia' },
   { name: 'contact', path: '/contato' }
 ]
