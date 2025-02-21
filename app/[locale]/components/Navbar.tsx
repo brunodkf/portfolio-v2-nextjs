@@ -58,7 +58,7 @@ export const Navbar = () => {
             <nav className='navbar__container container m-auto py-6 flex items-center justify-between' id="navbar">
                 <Image src='/logo.webp' alt="Logo Image" className="max-w-16" width={100} height={50} />
 
-                <div className="flex gap-3">
+                <div className="flex items-center gap-3">
                     <button className='text-laranja flex items-center' onClick={() => ToggleLanguage(language)} aria-label="Toggle language">
                         <IoEarthOutline className='text-xl mr-1' />
                         <p className='uppercase'>{language}</p>

@@ -12,6 +12,7 @@ import { Navbar } from "./components/Navbar";
 import MenuLateral from "./components/MenuLateral";
 import SocialLateral from "./components/SocialLateral";
 import Footer from "./components/Footer";
+import BackgroundDetail from "./components/BackgroundDetail";
 
 const inter = Inter({
   subsets: ['latin'], preload: true
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   title: "Bruno Furtado",
   description: "Transformo código em experiências incríveis! Sou um dev front-end apaixonado por design e interatividade. Veja meus projetos!",
   icons: {
-    icon: "/favicon.ico", 
+    icon: "/favicon.ico",
   },
 };
 
@@ -32,7 +33,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }>) {
-  
+
   const awaitedParams = await params;
   const { locale } = awaitedParams;
 
@@ -42,9 +43,10 @@ export default async function RootLayout({
 
   const messages = await getMessages({ locale });
 
+
   return (
     <html lang={locale}>
-      <body className={`${inter.className} antialiased bg-dark-global flex flex-col items-center justify-center relative`}>
+      <body className={`${inter.className} overflow-clip antialiased bg-dark-global flex flex-col items-center justify-center relative`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           <section className="midContent container flex relative">
@@ -53,6 +55,7 @@ export default async function RootLayout({
             <SocialLateral />
           </section>
           <Footer />
+          <BackgroundDetail />
         </NextIntlClientProvider>
       </body>
     </html>

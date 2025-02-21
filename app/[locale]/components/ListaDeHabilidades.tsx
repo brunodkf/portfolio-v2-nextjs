@@ -24,7 +24,6 @@ const hardSkills = [
   { name: 'Figma', icon: <FiFigma /> },
 ]
 
-
 interface ListaDeHabilidadesProps {
   view: string
 }

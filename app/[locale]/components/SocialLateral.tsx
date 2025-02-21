@@ -19,7 +19,7 @@ const menuSocials = [
 
 const SocialLateral = () => {
   return (
-    <aside className="w-10 flex flex-col justify-center items-center absolute h-full right-0 text-white">
+    <aside className="hidden w-10 lg:flex flex-col justify-center items-center absolute h-full right-0 text-white">
       <ul className="space-y-2 line before:right-2.5 after:right-2.5">
         {menuSocials.map((item, index) => (
           <motion.li
