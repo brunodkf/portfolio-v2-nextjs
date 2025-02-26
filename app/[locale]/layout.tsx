@@ -46,10 +46,10 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${inter.className} overflow-clip antialiased bg-dark-global flex flex-col items-center justify-center relative`}>
+      <body className={`${inter.className} lg:overflow-clip antialiased bg-dark-global w-screen h-screen flex flex-col items-center justify-center relative`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
-          <section className="midContent container flex relative">
+          <section className="mainContent container flex relative">
             <MenuLateral />
             {children}
             <SocialLateral />

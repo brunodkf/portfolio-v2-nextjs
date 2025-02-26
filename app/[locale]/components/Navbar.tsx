@@ -8,12 +8,14 @@ import { HiSun } from "react-icons/hi2";
 
 import { MdMenu } from "react-icons/md";
 
-
-import { Link, usePathname, useRouter } from '@/i18n/routing';
+import { usePathname, useRouter } from '@/i18n/routing';
 import { useParams } from 'next/navigation';
 
-
+import Link from 'next/link';
 import { motion } from 'framer-motion';
+
+import { useTranslations } from 'next-intl';
+
 
 export const Navbar = () => {
 
@@ -53,10 +55,26 @@ export const Navbar = () => {
         height: 20,
     }
 
+    const menuItems = [
+        { name: 'home', path: `/` },
+        { name: 'about', path: '/sobre' },
+        { name: 'projects', path: '/projetos' },
+        { name: 'resume', path: '/docs/BrunoCurriculo.pdf' },
+        { name: 'experience', path: '/experiencia' },
+        { name: 'contact', path: '/contato' }
+    ]
+
+    const t = useTranslations('Navbar')
+
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <header className="navbar w-full z-50 absolute top-0 px-4 sm:px-0" >
             <nav className='navbar__container container m-auto py-6 flex items-center justify-between' id="navbar">
-                <Image src='/logo.webp' alt="Logo Image" className="max-w-16" width={100} height={50} />
+
+                <Link href={`/${locale}/`} className='z-50' onClick={() => setIsOpen(false)}>
+                    <Image src='/logo.webp' alt="Logo Image" className="max-w-16" width={100} height={50} />
+                </Link>
 
                 <div className="flex items-center gap-3">
                     <button className='text-laranja flex items-center' onClick={() => ToggleLanguage(language)} aria-label="Toggle language">
@@ -69,18 +87,43 @@ export const Navbar = () => {
                         style={{
                             ...container,
                             justifyContent: "flex-" + (isOn ? "end" : "start"),
-                        }}  onClick={toggleSwitch} aria-label="Toggle Theme">
+                        }} onClick={toggleSwitch} aria-label="Toggle Theme">
 
                         <motion.div className="toggle-handle"
-                        style={handle} layout
-                        transition={{ type: "spring", visualDuration: 0.2, bounce: 0.2, }}>
+                            style={handle} layout
+                            transition={{ type: "spring", visualDuration: 0.2, bounce: 0.2, }}>
 
                             <HiSun className='bg-preto text-laranja rounded-full text-2xl ' />
-                            
+
                         </motion.div>
                     </button>
 
-                    <MdMenu className='sm:hidden text-laranja text-4xl' aria-label="Open Menu" />
+                    <MdMenu className='lg:hidden text-laranja text-4xl cursor-pointer z-50' aria-label="Open Menu" onClick={() => setIsOpen(!isOpen)} />
+
+                    <motion.div
+                        className={`fixed top-0 right-0 w-full h-screen text-branco bg-dark-global
+                        transform ${isOpen ? "-translate-x-0" : "translate-x-full"}
+                        transition-transform duration-300 ease-in-out`}
+                    >
+                        <ul className="flex flex-col items-center justify-center h-full gap-8 text-lg font-medium">
+                            {menuItems.map((item, index) => (
+                                <motion.li
+                                    key={index}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: index * 0.1, duration: 0.4 }}
+                                    className="relative group"
+                                >
+                                    <Link href={`/${locale}` + item.path} aria-label={`Ir para ${item.name}`} className='uppercase  text-lg ' onClick={() => setIsOpen(false)}>
+                                        {t(item.name)}
+                                        <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-laranja transition-all duration-300 group-hover:w-full"></span>
+                                    </Link>
+                                </motion.li>
+                            ))}
+                        </ul>
+                    </motion.div>
+
+
                 </div>
             </nav>
 

@@ -21,7 +21,7 @@ const BackgroundDetail = () => {
             <div>
                 <Image src='/poligons.svg' alt="Poligonos Background"
                     width={450} height={50}
-                    className={`absolute bottom-[-190px] right-[-70px] opacity-50`} />
+                    className={`hidden lg:block absolute bottom-[-190px] right-[-70px] opacity-50`} />
     
             </div>
         )
