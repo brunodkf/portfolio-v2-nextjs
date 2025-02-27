@@ -10,8 +10,11 @@ const antonio = Antonio({
     subsets: ['latin']
 });
 
-const ProjectsCard = [
-    {name: 'LA Medic Rio', image: '/projects/lamedic.webp', }
+const projectsCard = [
+    { name: 'Streaming APP', image: '/projects/streaming.webp', description: 'React APP', stacks: 'React | Tailwind CSS | JavaScript | APIs RESTful ', link: 'https://newlifefit.netlify.app/' },
+    { name: 'LA Medic Rio', image: '/projects/lamedic.webp', description: 'Website Institucional', stacks: 'HTML | Sass | Javascript', link: 'https://lamedicrio.com/' },
+    { name: 'Portfólio Web', image: '/projects/website.webp', description: 'Portfólio Online', stacks: 'HTML | CSS | Javascript', link: 'https://newlifefit.netlify.app/' },
+    { name: 'NewLife Fitness', image: '/projects/newlife.webp', description: 'Website Institucional', stacks: 'HTML | Sass | Javascript', link: 'https://newlifefit.netlify.app/' },
 ]
 
 
@@ -27,20 +30,20 @@ export default function Projetos() {
                 <span className="w-10 h-[2px] mt-2 bg-laranja block rounded"></span>
             </div>
 
-            <ul className="w-full h-auto bg-blue-900">
-                <motion.li>
-                    <Image src={''} alt="Hexágono" className="md:w-[50%]" />
-                    <div className="">
-                        <h2 className={`${antonio.className} text-branco text-3xl`}>
-                            LA Medic Rio
-                        </h2>
-                        <small className="">Website Institucional</small>
-
-                        <p className="text-base">HTML | SASS | Javascript</p>
-
-                        <Link href={'#'}>Confira</Link>
-                    </div>
-                </motion.li>
+            <ul className="w-full h-auto mt-3 py-8 grid grid-cols-1 grid-rows-4 gap-6 lg:grid-rows-2 lg:grid-cols-2 bg-blue-900 ">
+                {projectsCard.map((project, index) => (
+                    <motion.li key={index} className="bg-red-950 m-auto">
+                        <Image src={project.image} alt={project.name} width={400} height={400} />
+                        <div>
+                            <h2 className={`${antonio.className} text-branco text-3xl`}>
+                                {project.name}
+                            </h2>
+                            <small>{project.description}</small>
+                            <p className="text-base">{project.stacks}</p>
+                            <Link href="#">Confira</Link>
+                        </div>
+                    </motion.li>
+                ))}
             </ul>
         </main>
     )
