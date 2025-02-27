@@ -30,10 +30,10 @@ export default function Projetos() {
                 <span className="w-10 h-[2px] mt-2 bg-laranja block rounded"></span>
             </div>
 
-            <ul className="w-full h-auto mt-3 py-8 grid grid-cols-1 grid-rows-4 gap-6 lg:grid-rows-2 lg:grid-cols-2 bg-blue-900 ">
+            <ul className="h-auto mt-3 py-8 grid grid-cols-1 grid-rows-4 gap-6 lg:grid-rows-2 lg:grid-cols-2">
                 {projectsCard.map((project, index) => (
-                    <motion.li key={index} className="bg-red-950 m-auto">
-                        <Image src={project.image} alt={project.name} width={400} height={400} />
+                    <motion.li key={index} className="bg-preto w-11/12 m-auto rounded-lg p-2 shadow-lg">
+                        <Image src={project.image} alt={project.name} width={400} height={400} className="rounded"/>
                         <div>
                             <h2 className={`${antonio.className} text-branco text-3xl`}>
                                 {project.name}
