@@ -19,5 +19,9 @@
     "CardTitle3": "SEO",
     "CardDescription3": "Performance, search positioning and best practices",
     "Description": " Throughout my career, I have had the opportunity to work on various challenging projects that have allowed me to enhance my technical and communication skills. My experience includes developing highly responsive and intuitive user interfaces, utilizing the latest industry practices and technologies, as well as implementing automated testing to ensure software quality."
+  },
+  "Projects":{
+    "Title": "Projects",
+     "Button": "View Project"
   }
 }

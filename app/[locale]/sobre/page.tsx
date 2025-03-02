@@ -19,6 +19,7 @@ export default function Sobre() {
         <main className="about container w-full h-svh flex lg:items-center justify-center text-branco">
             
             <div className="relative w-full h-fit flex flex-col items-center py-32 lg:py-0 ">
+                
 
                 <div className="flex flex-col items-center">
                     <h1 className={`${antonio.className} text-branco text-3xl`}>{t("Title")}</h1>

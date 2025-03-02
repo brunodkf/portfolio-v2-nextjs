@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import React from 'react'
 import Link from 'next/link';
 
+
 const menuItems = [
     { name: 'home', path: `/` },
     { name: 'about', path: '/sobre' },
@@ -30,7 +31,7 @@ const ListaRouters = () => {
             transition={{ delay: index * 0.1, duration: 0.4 }}
             className="relative group"
           >
-            <Link href={`/${locale}` + item.path} aria-label={`Ir para ${item.name}`} className='uppercase  text-sm '>
+            <Link href={item.name === 'resume' ? item.path : `/${locale}` + item.path} aria-label={`Ir para ${item.name}`} className='uppercase  text-sm '>
               {t(item.name)}
               <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-laranja transition-all duration-300 group-hover:w-full"></span>
             </Link>

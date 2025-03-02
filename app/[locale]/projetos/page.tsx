@@ -65,8 +65,8 @@ export default function Projetos() {
                                     <small className="">{project.description}</small>
                                     <p className="text-sm">{project.stacks}</p>
                                 </div>
-                                <Link href={project.link} className="w-full text-center p-2 px-4 mt-3  bg-laranja text-preto rounded font-bold uppercase tracking-wider 
-                                lg:w-2/3 lg:p-0 lg:mt-2">Confira</Link>
+                                <Link href={project.link} className="w-full text-center p-2 px-4 mt-3 bg-laranja text-preto rounded font-bold uppercase tracking-wider 
+                                lg:w-2/3 lg:p-0 lg:mt-2 text-sm">{t("Button")}</Link>
                             </div>
                         </motion.li>
                     ))}
