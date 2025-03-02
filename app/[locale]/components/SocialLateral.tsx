@@ -10,7 +10,7 @@ import { FaGithubSquare } from "react-icons/fa";
 
 
 const menuSocials = [
-  { name: 'instagram', path: 'https://www.instagram.com/brunodkf', icon: <FaInstagramSquare /> },
+  { name: 'instagram', path: 'https://www.instagram.com/_devbruno', icon: <FaInstagramSquare /> },
   { name: 'linkedin', path: 'https://www.linkedin.com/in/brunodkf/', icon: <FaLinkedin /> },
   { name: 'whatsapp', path: 'https://api.whatsapp.com/send?phone=5521971564659&text=', icon: <FaWhatsappSquare /> },
   { name: 'github', path: 'https://github.com/brunodkf', icon: <FaGithubSquare /> }
