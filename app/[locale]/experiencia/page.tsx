@@ -23,8 +23,8 @@ export default function Experiencia() {
                 <span className="w-10 h-[2px] my-2 bg-laranja block rounded"></span>
             </div>
 
-            <div className=" w-3/4 h-2/4 pb-32 lg:pb-0 lg:overflow-y-auto custom-scrollbar lg:bg-cinza ">
-                <ul className="">
+            <div className=" w-full lg:w-3/4 h-2/4 pb-32 lg:pb-0 lg:overflow-y-auto custom-scrollbar lg:bg-cinza ">
+                <ul className="pb-32 lg:pb-0">
                     {experiences.map((exp, index) => (
                         <li key={index} className="mt-4 p-4">
                             <h3 className="font-title text-laranja text-2xl">{exp.Title}</h3>

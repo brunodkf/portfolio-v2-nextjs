@@ -8,11 +8,11 @@ import { routing } from '@/i18n/routing';
 
 import "./globals.css";
 
-import { Navbar } from "./components/Navbar";
-import MenuLateral from "./components/MenuLateral";
-import SocialLateral from "./components/SocialLateral";
-import Footer from "./components/Footer";
-import BackgroundDetail from "./components/BackgroundDetail";
+import { Navbar } from "../components/Navbar";
+import MenuLateral from "../components/MenuLateral";
+import Footer from "../components/Footer";
+import BackgroundDetail from "../components/BackgroundDetail";
+import SocialLateral from "../components/SocialLateral";
 
 const inter = Inter({
   subsets: ['latin'], preload: true

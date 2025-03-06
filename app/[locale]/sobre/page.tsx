@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import ListaDeHabilidades from "../components/ListaDeHabilidades";
+import ListaDeHabilidades from "../../components/ListaDeHabilidades";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
