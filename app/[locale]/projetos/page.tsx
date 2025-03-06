@@ -1,15 +1,9 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Antonio } from "next/font/google";
 import { motion } from 'framer-motion';
 import Link from "next/link";
 import Image from "next/image";
-
-const antonio = Antonio({
-    subsets: ['latin']
-});
-
 
 interface Project {
     name: string;
@@ -38,7 +32,7 @@ export default function Projetos() {
             <div className="py-32 lg:py-0 ">
 
                 <div className="flex flex-col items-center">
-                    <h1 className={`${antonio.className} text-branco text-3xl`}>{t("Title")}</h1>
+                    <h1 className={`font-title text-branco text-3xl`}>{t("Title")}</h1>
                     <span className="w-10 h-[2px] mt-2 bg-laranja block rounded"></span>
                 </div>
 
@@ -58,7 +52,7 @@ export default function Projetos() {
                             <div className="p-2 flex flex-col items-center justify-between 
                             lg:w-3/5 lg:items-start lg:flex-col">
                                 <div className="w-full h-auto">
-                                    <h2 className={`${antonio.className} text-branco text-3xl 
+                                    <h2 className={`font-title text-branco text-3xl 
                                     lg:text-2xl mt-2`}>
                                         {project.name}
                                     </h2>

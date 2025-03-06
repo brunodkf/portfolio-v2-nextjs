@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import type { PluginAPI } from 'tailwindcss/types/config';
+const { fontFamily } = require("tailwindcss/defaultTheme");
 const plugin = require('tailwindcss/plugin')
 
 export default {
@@ -10,6 +11,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Inter", ...fontFamily.sans],
+        title: ["Antonio", "sans-serif"],
+      },
       colors: {
         cinza: '#2c2c2c',
         laranja: '#dfa47d',

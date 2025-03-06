@@ -2,7 +2,7 @@
   "HomePage": {
     "Subtitle": "Desenvolvedor Frontend | UX / UI Designer"
   },
-  "Navbar":{
+  "Navbar": {
     "home": "Início",
     "about": "Sobre",
     "projects": "Projetos",
@@ -10,7 +10,7 @@
     "experience": "Experiência",
     "contact": "Contato"
   },
-  "About":{
+  "About": {
     "Title": "Sobre",
     "CardTitle1": "Desenvolvimento Web",
     "CardDescription1": "Produção de websites dinâmicos e responsivos",
@@ -20,8 +20,41 @@
     "CardDescription3": "Desempenho, posicionamento on search e boas práticas",
     "Description": " Durante minha carreira, tive a oportunidade de trabalhar em diversos projetos desafiadores que me permitiram aprimorar minhas habilidades técnicas e de comunicação. Minha experiência inclui o desenvolvimento de interfaces de usuário altamente responsivas e intuitivas, utilizando as mais recentes práticas e tecnologias do mercado e também a aplicação de testes automatizamos assegurando a qualidade de software."
   },
-  "Projects":{
+  "Projects": {
     "Title": "Projetos",
     "Button": "Confira"
+  },
+  "Experience": {
+    "Title": "Experiência",
+    "Job": "Responsibilidades",
+    "Experiences": [
+      {
+        "Title": "Freelancer",
+        "Position": "Desenvolvedor Web",
+        "Date": "2020 - Atualmente",
+        "Description": "Responsável pelo desenvolvimento e manutenção de websites e aplicações web de alta performance, garantindo usabilidade, design atrativo, acessibilidade e segurança.",
+        "Responsibilities": [
+          "Desenvolvimento de interfaces web responsivas utilizando HTML5, CSS3 e JavaScript",
+          "Aplicação de frameworks como ReactJS, NextJS e TailwindCSS",
+          "Criação de designs intuitivos com conceitos de UX/UI",
+          "Otimização de desempenho e SEO, garantindo compatibilidade cross-browser e uma experiência consistente.",
+          "Entrega de projetos com foco em soluções escaláveis e modernas. "
+        ]
+      },
+      {
+        "Title": "Lumis EIP Tecnologia da Informação",
+        "Position": "Desenvolvedor Frontend",
+        "Date": "2021 - 2023",
+        "Description": "Atuei no desenvolvimento de interfaces digitais para soluções corporativas, garantindo responsividade, acessibilidade e alta performance. Focado em otimização de experiências de usuário e integração com sistemas robustos",
+        "Responsibilities": [
+          "Implementação de interfaces responsivas e acessíveis, aplicando tecnologias como HTML5, CSS3, SASS e Javascript",
+          "Criação de designs de interfaces de usuário intuitivas e atrativas utilizando os conceitos de UX/UI",
+          "Colaboração com equipes multidisciplinares para criar soluções inovadoras e centradas no usuário. ",
+          "Utilização de ferramentas como Google Lighthouse e PageSpeed Insights para otimização de performance. ",
+          "Desenvolvimento e manutenção de bibliotecas de componentes reutilizáveis, promovendo escalabilidade. ",
+          "Garantia de acessibilidade com foco nos padrões WCAG e práticas de SEO on-page."
+        ]
+      }
+    ]
   }
 }

@@ -2,13 +2,7 @@
 
 import {useTranslations} from 'next-intl';
 
-import { Antonio } from 'next/font/google';
-
 import { motion } from 'framer-motion'; 
-
-const antonio = Antonio({
-  subsets: ['latin']
-});
 
 export default function  Home() {
 
@@ -45,7 +39,7 @@ export default function  Home() {
           />
         </motion.svg>
 
-        <div className={`${antonio.className} absolute inset-0 text-branco flex flex-col items-center justify-center`}>
+        <div className={`font-title absolute inset-0 text-branco flex flex-col items-center justify-center`}>
           <h1 className="text-center text-[80px] md:text-[102px] leading-[80px] md:leading-[100px] ">BRUNO <br /> FURTADO</h1>
           <p className="mt-4">{t("Subtitle")}</p>
         </div>

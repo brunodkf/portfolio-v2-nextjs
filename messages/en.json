@@ -2,7 +2,7 @@
   "HomePage": {
     "Subtitle": "Frontend Developer | UX / UI Designer"
   },
-  "Navbar":{
+  "Navbar": {
     "home": "Home",
     "about": "About",
     "projects": "Projects",
@@ -10,7 +10,7 @@
     "experience": "Experience",
     "contact": "Contact"
   },
-  "About":{
+  "About": {
     "Title": "About",
     "CardTitle1": "Web Development",
     "CardDescription1": "Production of dynamic and responsive websites",
@@ -20,8 +20,41 @@
     "CardDescription3": "Performance, search positioning and best practices",
     "Description": " Throughout my career, I have had the opportunity to work on various challenging projects that have allowed me to enhance my technical and communication skills. My experience includes developing highly responsive and intuitive user interfaces, utilizing the latest industry practices and technologies, as well as implementing automated testing to ensure software quality."
   },
-  "Projects":{
+  "Projects": {
     "Title": "Projects",
-     "Button": "View Project"
+    "Button": "View Project"
+  },
+  "Experience": {
+    "Title": "Experience",
+    "Job": "Responsibilities",
+    "Experiences": [
+      {
+        "Title": "Freelancer",
+        "Position": "Web Developer",
+        "Date": "2020 - Present",
+        "Description": "Responsible for the development and maintenance of high-performance websites and web applications, ensuring usability, attractive design, accessibility, and security.",
+        "Responsibilities": [
+          "Development of responsive web interfaces using HTML5, CSS3, and JavaScript",
+          "Application of frameworks such as ReactJS, NextJS, and TailwindCSS",
+          "Creation of intuitive designs based on UX/UI concepts",
+          "Performance and SEO optimization, ensuring cross-browser compatibility and a consistent user experience.",
+          "Delivery of projects focused on scalable and modern solutions."
+        ]
+      },
+      {
+        "Title": "Lumis EIP Information Technology",
+        "Position": "Frontend Developer",
+        "Date": "2021 - 2023",
+        "Description": "Worked on the development of digital interfaces for corporate solutions, ensuring responsiveness, accessibility, and high performance. Focused on optimizing user experiences and integrating with robust systems.",
+        "Responsibilities": [
+          "Implementation of responsive and accessible interfaces using technologies such as HTML5, CSS3, SASS, and JavaScript",
+          "Creation of intuitive and attractive user interface designs utilizing UX/UI concepts",
+          "Collaboration with multidisciplinary teams to develop innovative and user-centered solutions.",
+          "Use of tools such as Google Lighthouse and PageSpeed Insights for performance optimization.",
+          "Development and maintenance of reusable component libraries, promoting scalability.",
+          "Ensuring accessibility with a focus on WCAG standards and on-page SEO best practices."
+        ]
+      }
+    ]
   }
 }

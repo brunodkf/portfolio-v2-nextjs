@@ -2,13 +2,10 @@
 
 import { useTranslations } from "next-intl";
 import ListaDeHabilidades from "../components/ListaDeHabilidades";
-import { Antonio } from 'next/font/google';
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const antonio = Antonio({
-    subsets: ['latin']
-});
+
 
 
 export default function Sobre() {
@@ -22,7 +19,7 @@ export default function Sobre() {
                 
 
                 <div className="flex flex-col items-center">
-                    <h1 className={`${antonio.className} text-branco text-3xl`}>{t("Title")}</h1>
+                    <h1 className={`font-title text-branco text-3xl`}>{t("Title")}</h1>
                     <span className="w-10 h-[2px] mt-2 bg-laranja block rounded"></span>
                 </div>
 
