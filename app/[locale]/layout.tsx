@@ -14,6 +14,9 @@ import Footer from "../components/Footer";
 import BackgroundDetail from "../components/BackgroundDetail";
 import SocialLateral from "../components/SocialLateral";
 
+
+import { ThemeProviderClient } from "@/context/ThemeProviderClient";
+
 const inter = Inter({
   subsets: ['latin'], preload: true
 });
@@ -45,18 +48,20 @@ export default async function RootLayout({
 
 
   return (
-    <html lang={locale}>
-      <body className={`${inter.className} lg:overflow-clip antialiased bg-dark-global w-screen h-screen flex flex-col items-center justify-center relative`}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navbar />
-          <section className="mainContent container flex relative">
-            <MenuLateral />
-            {children}
-            <SocialLateral />
-          </section>
-          <Footer />
-          <BackgroundDetail />
-        </NextIntlClientProvider>
+    <html lang={locale} >
+      <body className={`${inter.className} lg:overflow-clip antialiased bg-branco dark:bg-dark-global w-screen h-screen flex flex-col items-center justify-center relative`}>
+        <ThemeProviderClient >
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <Navbar />
+            <section className="mainContent container flex relative">
+              <MenuLateral />
+              {children}
+              <SocialLateral />
+            </section>
+            <Footer />
+            <BackgroundDetail />
+          </NextIntlClientProvider>
+        </ThemeProviderClient >
       </body>
     </html>
   );

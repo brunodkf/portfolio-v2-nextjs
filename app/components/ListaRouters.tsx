@@ -22,7 +22,7 @@ const ListaRouters = () => {
     const { locale } = useParams();
 
     return (
-        <ul className="space-y-2 line ">
+        <ul className="space-y-2 line before:bg-cinza dark:before:bg-branco after:bg-cinza dark:after:bg-branco  ">
         {menuItems.map((item, index) => (
           <motion.li
             key={index}

@@ -19,15 +19,15 @@ const menuSocials = [
 
 const SocialLateral = () => {
   return (
-    <aside className="hidden w-10 lg:flex flex-col justify-center items-center absolute h-full right-0 text-white">
-      <ul className="space-y-2 line before:right-2.5 after:right-2.5">
+    <aside className="hidden w-10 lg:flex flex-col justify-center items-center absolute h-full right-0 text-cinza dark:text-white">
+      <ul className="space-y-2 line before:right-2.5 after:right-2.5  before:bg-cinza dark:before:bg-branco after:bg-cinza dark:after:bg-branco">
         {menuSocials.map((item, index) => (
           <motion.li
             key={index}
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.1, duration: 0.4 }}
-            className="relative group hover:bg-laranja hover:text-preto rounded"
+            className="relative group hover:bg-laranja hover:text-cinza rounded"
           >
             <Link href={item.path} aria-label={`Ir para ${item.name}`} className='uppercase text-2xl'>
               {item.icon}

@@ -19,7 +19,7 @@ const Footer = () => {
                 
             </div>
             <div className="hidden container m-auto lg:flex items-center justify-between">
-                <h1 className={`${antonio.className} text-branco `}>Memento Mori | Memento Vivere</h1>
+                <h1 className={`${antonio.className} text-cinza dark:text-branco `}>Memento Mori | Memento Vivere</h1>
 
                 {
                     pathname === '/pt' || pathname === '/en' ?

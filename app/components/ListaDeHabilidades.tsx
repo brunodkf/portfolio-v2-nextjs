@@ -30,7 +30,7 @@ interface ListaDeHabilidadesProps {
 
 const ListaDeHabilidades: React.FC<ListaDeHabilidadesProps> = ({ view }) => {
   return (
-    <ul className={`flex gap-4 text-branco ${view}`}>
+    <ul className={`flex gap-4 text-cinza dark:text-branco ${view}`}>
       {hardSkills?.map((item, index) => (
         <li key={index} className='text-2xl'>
           {item.icon}

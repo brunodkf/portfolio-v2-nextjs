@@ -1,20 +1,23 @@
 'use client';
 
 import React, { useEffect, useState } from 'react'
+import { usePathname, useRouter } from '@/i18n/routing';
+import { useParams } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import { useTheme } from "next-themes";
+
 import Image from 'next/image'
+
 import { IoEarthOutline } from "react-icons/io5";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { HiSun } from "react-icons/hi2";
-
+import { FaMoon } from "react-icons/fa6";
 import { MdMenu } from "react-icons/md";
 
-import { usePathname, useRouter } from '@/i18n/routing';
-import { useParams } from 'next/navigation';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-import { useTranslations } from 'next-intl';
 
 
 export const Navbar = () => {
@@ -37,12 +40,16 @@ export const Navbar = () => {
 
     const [isOn, setIsOn] = useState(false)
 
-    const toggleSwitch = () => setIsOn(!isOn)
+    const { theme, setTheme } = useTheme();
+
+    const toggleSwitch = () => {
+        setIsOn(!isOn)
+        setTheme(theme === "dark" ? "light" : "dark")
+    }
 
     const container = {
         width: 55,
         height: 28,
-        backgroundColor: "#dfa47d",
         borderRadius: 50,
         cursor: "pointer",
         display: "flex",
@@ -68,6 +75,7 @@ export const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
+ 
     return (
         <header className="navbar w-full z-50 absolute top-0 px-4 sm:px-0" >
             <nav className='navbar__container container m-auto py-6 flex items-center justify-between' id="navbar">
@@ -77,13 +85,14 @@ export const Navbar = () => {
                 </Link>
 
                 <div className="flex items-center gap-3">
-                    <button className='text-laranja flex items-center' onClick={() => ToggleLanguage(language)} aria-label="Toggle language">
+                    <button className=' dark:text-laranja flex items-center' onClick={() => ToggleLanguage(language)} aria-label="Toggle language">
                         <IoEarthOutline className='text-xl mr-1' />
                         <p className='uppercase'>{language}</p>
                         <MdOutlineKeyboardArrowDown />
                     </button>
 
-                    <button className='toggle-container'
+
+                    <button className='toggle-container bg-cinza dark:bg-laranja'
                         style={{
                             ...container,
                             justifyContent: "flex-" + (isOn ? "end" : "start"),
@@ -93,7 +102,11 @@ export const Navbar = () => {
                             style={handle} layout
                             transition={{ type: "spring", visualDuration: 0.2, bounce: 0.2, }}>
 
-                            <HiSun className='bg-preto text-laranja rounded-full text-2xl ' />
+                                {
+                                    isOn ?  <FaMoon className='bg-laranja text-cinza rounded-full text-2xl p-1' /> : <HiSun className='bg-preto text-laranja rounded-full text-2xl ' />
+                                }
+                        
+                            
 
                         </motion.div>
                     </button>

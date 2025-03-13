@@ -1,13 +1,25 @@
 import type { Config } from "tailwindcss";
-import type { PluginAPI } from 'tailwindcss/types/config';
+import type { PluginAPI } from "tailwindcss/types/config";
 const { fontFamily } = require("tailwindcss/defaultTheme");
-const plugin = require('tailwindcss/plugin')
+const plugin = require("tailwindcss/plugin");
+
+
+/** @type {import('tailwindcss').Config} */
 
 export default {
+  
+  darkMode: "class", // Permite alternância de tema via classes CSS
+
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./context/**/*.{js,ts,jsx,tsx}",
+  ],
+  safelist: [
+    "dark:bg-background-dark",
+    "dark:text-dark",
+    "dark:bg-cinza",
   ],
   theme: {
     extend: {
@@ -16,49 +28,24 @@ export default {
         title: ["Antonio", "sans-serif"],
       },
       colors: {
-        cinza: '#2c2c2c',
-        laranja: '#dfa47d',
-        preto: '#1e1e1e',
-        branco: '#ededed'
+
+        background: {
+          DEFAULT: "#f8f9fa",
+          dark: "#1e1e1e",
+        },
+        text: {
+          DEFAULT: "#1e1e1e",
+          dark: "#ededed",
+        },
+
+        cinza: "#2c2c2c",
+        laranja: "#dfa47d",
+        laranja2: "#C16C34",
+        preto: "#1e1e1e",
+        branco: "#ededed",
+        
       },
     },
   },
-  plugins: [
-    plugin(function ({ addUtilities }: PluginAPI) {
-      const newUtilities = {
-        '.bg-dark-global': {
-          backgroundColor: '#1e1e1e',
-          background: 'radial-gradient(circle, #2c2c2c, #282828, #252525, #212121, #1e1e1e);'
-        },
-
-        '.line': {
-          position: 'relative'
-        },
-        '.line:before':{
-          content: '""',
-          position: 'absolute',
-          display: 'block',
-          width: '3px',
-          height: '3em',
-          backgroundColor: '#ededed',
-          top: '-4rem',
-          borderRadius: '10%',
-          opacity: '.7'
-        },
-        '.line:after':{
-          content: '""',
-          position: 'absolute',
-          display: 'block',
-          width: '3px',
-          height: '3em',
-          backgroundColor: '#ededed',
-          bottom: '-4rem',
-          borderRadius: '10%',
-          opacity: '.7'
-        },
-
-      };
-      addUtilities(newUtilities);
-    }),
-  ],
+  plugins: [],
 } satisfies Config;
