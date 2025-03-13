@@ -40,7 +40,7 @@ export default {
 
         cinza: "#2c2c2c",
         laranja: "#dfa47d",
-        laranja2: "#C16C34",
+        laranja2: "#df8e3a",
         preto: "#1e1e1e",
         branco: "#ededed",
         

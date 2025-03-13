@@ -27,17 +27,17 @@ export default function Projetos() {
     
 
     return (
-        <main className="projects container w-full h-svh flex flex-col lg:items-center lg:justify-center text-branco">
+        <main className="projects container w-full h-svh flex flex-col lg:items-center lg:justify-center">
             
             <div className="py-32 lg:py-0 ">
 
                 <div className="flex flex-col items-center">
-                    <h1 className={`font-title text-branco text-3xl`}>{t("Title")}</h1>
-                    <span className="w-10 h-[2px] mt-2 bg-laranja block rounded"></span>
+                    <h1 className={`font-title text-preto dark:text-branco text-3xl`}>{t("Title")}</h1>
+                    <span className="w-10 h-[2px] mt-2 bg-branco dark:bg-laranja block rounded"></span>
                 </div>
 
                 <ul className="w-3/3  h-auto mt-3 py-8 grid grid-cols-1 grid-rows-4 
-                lg:w-full lg:mt-8 lg:py-0 lg:gap-3 lg:grid-rows-2 lg:grid-cols-2 ">
+                lg:w-full lg:mt-8 lg:py-0 lg:gap-3 lg:grid-rows-2 lg:grid-cols-2 text-branco">
                     {projectsCard.map((project, index) => (
                         <motion.li key={index} 
                         initial={{ opacity: 0, y: 40 }}

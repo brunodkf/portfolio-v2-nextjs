@@ -9,7 +9,7 @@ export function ThemeProviderClient({ children }: { children: React.ReactNode })
   useEffect(() => {
     const theme = localStorage.getItem("theme");
 
-    console.log("Tema atual antes da correção:", theme);
+    // console.log("Tema atual antes da correção:", theme);
 
     // Se o tema salvo for inválido ou não existir, define "dark" como padrão
     if (!theme || !["light", "dark", "system"].includes(theme)) {

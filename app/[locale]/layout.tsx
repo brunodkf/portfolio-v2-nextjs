@@ -49,7 +49,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} >
-      <body className={`${inter.className} lg:overflow-clip antialiased bg-branco dark:bg-dark-global w-screen h-screen flex flex-col items-center justify-center relative`}>
+      <body className={`${inter.className} lg:overflow-clip antialiased bg-laranja dark:bg-dark-global w-screen h-screen flex flex-col items-center justify-center relative`}>
         <ThemeProviderClient >
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Navbar />

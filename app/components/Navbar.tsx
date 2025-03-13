@@ -81,7 +81,7 @@ export const Navbar = () => {
             <nav className='navbar__container container m-auto py-6 flex items-center justify-between' id="navbar">
 
                 <Link href={`/${locale}/`} className='z-50' onClick={() => setIsOpen(false)}>
-                    <Image src='/logo.webp' alt="Logo Image" className="max-w-16" width={100} height={50} />
+                    <Image src='/logo.webp' alt="Logo Image" className="max-w-16 brightness-0 dark:filter-none" width={100} height={50} />
                 </Link>
 
                 <div className="flex items-center gap-3">
@@ -111,10 +111,10 @@ export const Navbar = () => {
                         </motion.div>
                     </button>
 
-                    <MdMenu className='lg:hidden text-laranja text-4xl cursor-pointer z-50' aria-label="Open Menu" onClick={() => setIsOpen(!isOpen)} />
+                    <MdMenu className='lg:hidden dark:text-laranja text-4xl cursor-pointer z-50' aria-label="Open Menu" onClick={() => setIsOpen(!isOpen)} />
 
                     <motion.div
-                        className={`fixed top-0 right-0 w-full h-screen text-branco bg-dark-global
+                        className={`fixed top-0 right-0 w-full h-screen dark:text-branco bg-laranja dark:bg-dark-global
                         transform ${isOpen ? "-translate-x-0" : "translate-x-full"}
                         transition-transform duration-300 ease-in-out`}
                     >
