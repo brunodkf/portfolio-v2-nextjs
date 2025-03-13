@@ -58,6 +58,9 @@
     ]
   },
   "Contact": {
-    "Title": "Contato"
+    "Title": "Contato",
+    "Text1": "Tem um projeto em mente ou precisa de um desenvolvedor frontend para sua equipe? Vamos conversar!",
+    "Button": "Me envie uma mensagem",
+    "Text2": "Estou à disposição para discutir ideias e encontrar a melhor solução para o seu negócio! 🚀"
   }
 }

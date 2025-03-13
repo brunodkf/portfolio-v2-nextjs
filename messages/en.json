@@ -57,7 +57,10 @@
       }
     ]
   },
-  "Contact":{
-    
+  "Contact": {
+    "Title": "Contact",
+    "Text1": "Got a project in mind or need a frontend developer for your team? Let’s talk!",
+    "Button": "Send me a message",
+    "Text2": "I’m ready to discuss ideas and find the best solution for your business! 🚀"
   }
 }
