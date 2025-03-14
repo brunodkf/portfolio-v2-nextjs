@@ -17,7 +17,7 @@ export default function Contato() {
             <div className="lg:w-3/4 flex flex-col justify-center text-center">
                 <p className='py-20 text-xl lg:py-4'>{t("Text1")}</p>
 
-                <Link href={"#"} aria-label={`Ir para Whatsapp`} className='bg-cinza dark:bg-laranja  p-4 rounded-xl w-4/5 lg:w-[40%] lg:text-sm m-auto text-branco dark:text-preto uppercase font-bold tracking-wider'>
+                <Link href={'https://api.whatsapp.com/send?phone=5521971564659&text='} aria-label={`Ir para Whatsapp`} className='bg-cinza dark:bg-laranja  p-4 rounded-xl w-4/5 lg:w-[40%] lg:text-sm m-auto text-branco dark:text-preto uppercase font-bold tracking-wider'>
                 {t("Button")}
                 </Link>
 
