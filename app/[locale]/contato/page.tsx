@@ -21,7 +21,6 @@ export default function Contato() {
                 {t("Button")}
                 </Link>
 
-
                 <p className='py-20 text-xl lg:py-4'>{t("Text2")}</p>
             </div>
         </main>
