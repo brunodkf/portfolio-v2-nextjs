@@ -66,6 +66,8 @@
   },
   "Feedback": {
     "Title": "Depoimentos",
+    "SubTitle": "Veja o que meus clientes e parceiros dizem sobre meu trabalho!",
+    "TextIntro": "Cada projeto é único, e meu compromisso é entregar soluções eficientes, otimizadas e bem estruturadas. Veja o que dizem sobre a experiência de trabalhar comigo.",
     "Feedbacks": [
       {
         "Name": "Anderson Nascimento",

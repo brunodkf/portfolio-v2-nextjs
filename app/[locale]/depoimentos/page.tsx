@@ -31,9 +31,9 @@ export default function Depoimentos() {
                 <span className="w-10 h-[2px] my-2  bg-branco dark:bg-laranja block rounded"></span>
 
 
-                <h2 className="text-center text-lg p-4">Veja o que meus clientes e parceiros dizem sobre meu trabalho!</h2>
+                <h2 className="text-center text-lg p-4">{t("SubTitle")}</h2>
 
-                <p className="text-center px-4">Cada projeto é único, e meu compromisso é entregar soluções eficientes, otimizadas e bem estruturadas. Veja o que dizem sobre a experiência de trabalhar comigo.</p>
+                <p className="text-center px-4">{t("TextIntro")}</p>
 
             </div>
 

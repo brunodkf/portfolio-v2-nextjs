@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import type { PluginAPI } from "tailwindcss/types/config";
 const { fontFamily } = require("tailwindcss/defaultTheme");
 const plugin = require("tailwindcss/plugin");
 
@@ -8,7 +7,7 @@ const plugin = require("tailwindcss/plugin");
 
 export default {
   
-  darkMode: "class", // Permite alternância de tema via classes CSS
+  darkMode: "class", 
 
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",

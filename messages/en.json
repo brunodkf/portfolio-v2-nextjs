@@ -66,6 +66,8 @@
   },
   "Feedback": {
     "Title": "Feedback",
+     "SubTitle": "See what my clients and partners say about my work!",
+    "TextIntro": "Every project is unique, and my commitment is to deliver efficient, optimized, and well-structured solutions. See what they say about the experience of working with me.",
     "Feedbacks": [
       {
         "Name": "Anderson Nascimento",
