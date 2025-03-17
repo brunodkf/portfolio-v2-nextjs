@@ -8,7 +8,8 @@
     "projects": "Projetos",
     "resume": "Resumo",
     "experience": "Experiência",
-    "contact": "Contato"
+    "contact": "Contato",
+    "feedback": "Depoimentos"
   },
   "About": {
     "Title": "Sobre",
@@ -62,5 +63,36 @@
     "Text1": "Tem um projeto em mente ou precisa de um desenvolvedor frontend para sua equipe? Vamos conversar!",
     "Button": "Me envie uma mensagem",
     "Text2": "Estou à disposição para discutir ideias e encontrar a melhor solução para o seu negócio! 🚀"
+  },
+  "Feedback": {
+    "Title": "Depoimentos",
+    "Feedbacks": [
+      {
+        "Name": "Anderson Nascimento",
+        "Position": "Sócio Fundador | LA Medic Rio",
+        "Text": "Grande Bruno, muito obrigado por desenvolver o site da minha empresa. Com certeza é mais uma realização de um sonho pra todos nós. O site tem sido um sucesso e de grande valia."
+      },
+      {
+        "Name": "Thayane Fabiano",
+        "Position": "UX UI Designer | Product Designer",
+        "Text": "Trabalhar com o Bruno na Lumis me ajudou muito a entender mais sobre desenvolvimento e me tornar uma designer melhor. Sua disposição de aprender, colaborar e dedicação para entregar o melhor resultado possível causaram uma excelente impressão em mim."
+      
+      },
+      {
+        "Name": "Luis Fernando",
+        "Position": "Sócio Fundador | LA Medic Rio",
+        "Text": "É a realização de uma vontade de muito tempo, Bruno ajudou a gente a entender o processo entre imaginar e realizar, dai pra frente é só história. Estou muito feliz com o resultado!"
+      },
+      {
+        "Name": "Bruna Gomes",
+        "Position": "Social Media | Branding | Inbound Marketing",
+        "Text": "Bruno é um profissional muito dedicado e solicito. Atuamos juntos em diversos projetos, onde ele demonstrou muita eficiência e agilidade, além de sempre entregar um bom serviço."
+      },
+      {
+        "Name": "Daniel Clemente",
+        "Position": "Graphic Designer | Motion Designer",
+        "Text": "Tive o prazer de trabalhar com o Bruno quando ele atuava no time de Marketing da Lumis. Bruno sempre foi muito solícito e mostrava domínio sobre o que fazia e falava. Com ele, conseguia compreender melhor sobre desenvolvimento e sobre como a nossa área trabalhava em conjunto."
+      }
+    ]
   }
 }

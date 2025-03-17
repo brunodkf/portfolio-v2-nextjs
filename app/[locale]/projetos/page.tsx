@@ -21,7 +21,7 @@ export default function Projetos() {
     const projectsCard: Project[] = [
         { name: 'Streaming APP', image: '/projects/streaminglg.webp', description: 'React App', stacks: 'React | Tailwind CSS | JavaScript', link: 'https://streaming-opal.vercel.app/' },
         { name: 'LA Medic Rio', image: '/projects/lamediclg.webp', description: 'Website Institucional', stacks: 'HTML | Sass | Javascript', link: 'https://lamedicrio.com/' },
-        { name: 'Portfólio Web - V1', image: '/projects/websitelg.webp', description: 'Portfólio Online', stacks: 'HTML | CSS | Javascript', link: 'http://brunodkf.netlify.app/' },
+        { name: 'Portfólio Web - V1', image: '/projects/websitelg.webp', description: 'Portfólio Online', stacks: 'HTML | CSS | Javascript', link: 'http://brunodkfv1.netlify.app/' },
         { name: 'NewLife Fitness', image: '/projects/newlifelg.webp', description: 'Website Institucional', stacks: 'HTML | Sass | Javascript', link: 'https://newlifefit.netlify.app/' },
     ]
     

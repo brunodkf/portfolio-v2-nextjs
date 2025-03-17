@@ -58,3 +58,21 @@
   }
 
 }
+
+.swiper-pagination{
+  position: relative !important;
+}
+.swiper-pagination-bullet {
+  background: white !important;
+  width: 12px;
+  height: 12px;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  margin-top: 22em;
+}
+.swiper-pagination-bullet-active {
+  background: #ededed !important; 
+  width: 16px;
+  height: 16px;
+  opacity: 1;
+}

@@ -8,7 +8,8 @@
     "projects": "Projects",
     "resume": "Resume",
     "experience": "Experience",
-    "contact": "Contact"
+    "contact": "Contact",
+    "feedback": "Feedback"
   },
   "About": {
     "Title": "About",
@@ -62,5 +63,35 @@
     "Text1": "Got a project in mind or need a frontend developer for your team? Let’s talk!",
     "Button": "Send me a message",
     "Text2": "I’m ready to discuss ideas and find the best solution for your business! 🚀"
+  },
+  "Feedback": {
+    "Title": "Feedback",
+    "Feedbacks": [
+      {
+        "Name": "Anderson Nascimento",
+        "Position": "Founding Partner | LA Medic Rio",
+        "Text": "Dear Bruno, thank you so much for developing my company's website. It is undoubtedly another dream come true for all of us. The website has been a success and extremely valuable."
+      },
+      {
+        "Name": "Thayane Fabiano",
+        "Position": "UX UI Designer | Product Designer",
+        "Text": "Working with Bruno at Lumis helped me a lot to understand more about development and become a better designer. His willingness to learn, collaborate, and dedication to delivering the best possible result left an excellent impression on me."
+      },
+      {
+        "Name": "Luis Fernando",
+        "Position": "Founding Partner | LA Medic Rio",
+        "Text": "It is the fulfillment of a long-time wish; Bruno helped us understand the process between imagining and making it happen, and from there, it's all history. I'm very happy with the result!"
+      },
+      {
+        "Name": "Bruna Gomes",
+        "Position": "Social Media | Branding | Inbound Marketing",
+        "Text": "Bruno is a very dedicated and helpful professional. We worked together on several projects, where he demonstrated a lot of efficiency and agility, always delivering great work."
+      },
+      {
+        "Name": "Daniel Clemente",
+        "Position": "Graphic Designer | Motion Designer",
+        "Text": "I had the pleasure of working with Bruno when he was part of the Marketing team at Lumis. Bruno was always very helpful and showed mastery over what he did and said. With him, I was able to better understand development and how our area worked together."
+      }
+    ]
   }
 }
