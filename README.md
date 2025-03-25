@@ -43,11 +43,13 @@ Este é o meu portfólio pessoal desenvolvido para apresentar minhas habilidades
 ## Estrutura do Projeto
 
 ```
-/src
+/app
+ |-- [locale]   // Páginas principais
  |-- components   // Componentes reutilizáveis
- |-- pages         // Páginas principais
- |-- styles        // Estilos globais e configurações do TailwindCSS
- |-- utils         // Funções utilitárias
+/src
+ |-- context   // Context theme
+ |-- i18n   // Internacionalização
+
 ```
 
 
