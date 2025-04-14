@@ -46,7 +46,7 @@ export default function Depoimentos() {
                 loop={true}
                 pagination={{ clickable: true }}
                 autoplay={{
-                    delay: 2000,
+                    delay: 4000,
                     disableOnInteraction: false,
                 }}
                 coverflowEffect={{
