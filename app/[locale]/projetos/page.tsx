@@ -20,8 +20,9 @@ export default function Projetos() {
 
     const projectsCard: Project[] = [
         { name: 'StartCrypto', image: '/projects/startcrypto.webp', description: 'Next APP', stacks: 'React | Next.js | TailwindCSS | Typescript', link: 'https://startscrypto.com.br/' },
+          { name: 'LA Medic Rio', image: '/projects/lamediclg.webp', description: 'Website Institucional', stacks: 'HTML | Sass | Javascript', link: 'https://lamedicrio.com/' },
         { name: 'Streaming APP', image: '/projects/streaminglg.webp', description: 'React APP', stacks: 'React | Tailwind CSS | JavaScript', link: 'https://streaming-opal.vercel.app/' },
-        { name: 'LA Medic Rio', image: '/projects/lamediclg.webp', description: 'Website Institucional', stacks: 'HTML | Sass | Javascript', link: 'https://lamedicrio.com/' },
+      
         { name: 'NewLife Fitness', image: '/projects/newlifelg.webp', description: 'Website Institucional', stacks: 'HTML | Sass | Javascript', link: 'https://newlifefit.netlify.app/' },
     ]
     
