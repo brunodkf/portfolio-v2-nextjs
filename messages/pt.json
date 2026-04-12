@@ -30,30 +30,63 @@
     "Job": "Responsibilidades",
     "Experiences": [
       {
-        "Title": "Freelancer",
-        "Position": "Desenvolvedor Web",
-        "Date": "2020 - Atualmente",
-        "Description": "Responsável pelo desenvolvimento e manutenção de websites e aplicações web de alta performance, garantindo usabilidade, design atrativo, acessibilidade e segurança.",
+        "Title": "H&W Publishing",
+        "Position": "Desenvolvedor Frontend Pleno",
+        "Date": "Jun 2025 - Atualmente",
+        "Description": "Desenvolvimento de landing pages e VSLs de alta conversão para empresa americana, focando em performance, acessibilidade e otimização de conversão.",
         "Responsibilities": [
-          "Desenvolvimento de interfaces web responsivas utilizando HTML5, CSS3 e JavaScript",
-          "Aplicação de frameworks como ReactJS, NextJS e TailwindCSS",
-          "Criação de designs intuitivos com conceitos de UX/UI",
-          "Otimização de desempenho e SEO, garantindo compatibilidade cross-browser e uma experiência consistente.",
-          "Entrega de projetos com foco em soluções escaláveis e modernas. "
+          "Desenvolvimento e entrega de mais de 200 landing pages e VSLs utilizando HTML, CSS, JavaScript, Bootstrap 5, Next.js e TypeScript.",
+          "Manutenção de pontuação Lighthouse acima de 80 em performance, acessibilidade e SEO.",
+          "Implementação de estratégias de A/B Testing e backredirect para otimização de CRO.",
+          "Desenvolvimento de fluxos completos de conversão com foco em UX orientada a resultado.",
+          "Aplicação de boas práticas de SEO on-page e componentização com Next.js + TypeScript."
         ]
       },
       {
-        "Title": "Lumis EIP Tecnologia da Informação",
-        "Position": "Desenvolvedor Frontend",
-        "Date": "2021 - 2023",
-        "Description": "Atuei no desenvolvimento de interfaces digitais para soluções corporativas, garantindo responsividade, acessibilidade e alta performance. Focado em otimização de experiências de usuário e integração com sistemas robustos",
+        "Title": "Freelancer",
+        "Position": "Desenvolvedor Web",
+        "Date": "Jan 2020 - Atualmente",
+        "Description": "Desenvolvimento e entrega de projetos web para diversos clientes, abrangendo plataformas educacionais, B2B e e-commerce, com ênfase em conversão, performance e manutenção.",
         "Responsibilities": [
-          "Implementação de interfaces responsivas e acessíveis, aplicando tecnologias como HTML5, CSS3, SASS e Javascript",
-          "Criação de designs de interfaces de usuário intuitivas e atrativas utilizando os conceitos de UX/UI",
-          "Colaboração com equipes multidisciplinares para criar soluções inovadoras e centradas no usuário. ",
-          "Utilização de ferramentas como Google Lighthouse e PageSpeed Insights para otimização de performance. ",
-          "Desenvolvimento e manutenção de bibliotecas de componentes reutilizáveis, promovendo escalabilidade. ",
-          "Garantia de acessibilidade com foco nos padrões WCAG e práticas de SEO on-page."
+          "Desenvolvimento de mais de 15 projetos web utilizando React.js, Next.js, Tailwind CSS e JavaScript.",
+          "Criação de site de vendas para curso de criptomoedas (StartCrypto), focado em conversão e copy visual.",
+          "Desenvolvimento de site institucional para empresa de equipamentos médicos (La Medic Rio), com ênfase em credibilidade e SEO local.",
+          "Construção de plataforma web com dashboard para alunos (On Training), integrando área de membros e gestão de conteúdo.",
+          "Responsável pelo ciclo completo: requisitos, design, desenvolvimento, deploy e manutenção."
+        ]
+      },
+      {
+        "Title": "Lumis",
+        "Position": "Desenvolvedor Web Front End",
+        "Date": "Ago 2022 - Ago 2023",
+        "Description": "Desenvolvimento de interfaces digitais responsivas e acessíveis para soluções corporativas, com foco em performance e colaboração multidisciplinar.",
+        "Responsibilities": [
+          "Desenvolvimento de interfaces responsivas e acessíveis utilizando HTML5, CSS3, SASS e JavaScript.",
+          "Criação e manutenção de biblioteca de componentes reutilizáveis para consistência visual.",
+          "Otimização de performance com Google Lighthouse e PageSpeed Insights.",
+          "Garantia de acessibilidade conforme padrões WCAG e aplicação de SEO on-page.",
+          "Colaboração com equipes multidisciplinares na plataforma DXP corporativa."
+        ]
+      },
+      {
+        "Title": "Lumis",
+        "Position": "Estagiário de Desenvolvimento Web",
+        "Date": "Nov 2021 - Ago 2022",
+        "Description": "Tradução de designs UX/UI em código interativo e integração com sistemas de CRM para captura de leads.",
+        "Responsibilities": [
+          "Criação de layouts responsivos e tradução de designs em código.",
+          "Implementação de SEO e desenvolvimento em plataforma DXP.",
+          "Integração com HubSpot CRM para captura de leads."
+        ]
+      },
+      {
+        "Title": "Go! Telecom",
+        "Position": "Analista de Redes",
+        "Date": "Fev 2021 - Ago 2021",
+        "Description": "Monitoramento e manutenção da infraestrutura de rede, incluindo atualização de hardware e software.",
+        "Responsibilities": [
+          "Monitoramento de desempenho e manutenção da infraestrutura de rede.",
+          "Atualização de hardware e software (switches e roteadores)."
         ]
       }
     ]
