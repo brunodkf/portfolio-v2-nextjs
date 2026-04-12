@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from 'next/font/google';
 
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 
@@ -34,7 +34,7 @@ export default async function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }>) {
 
   const awaitedParams = await params;
@@ -44,12 +44,14 @@ export default async function RootLayout({
     notFound();
   }
 
-  const messages = await getMessages({ locale });
+  setRequestLocale(locale);
+
+  const messages = (await import(`../../messages/${locale}.json`)).default;
 
 
   return (
-    <html lang={locale} >
-      <body className={`${inter.className} lg:overflow-clip antialiased bg-creme dark:bg-dark-global w-screen h-screen flex flex-col items-center justify-center relative`}>
+    <html lang={locale} suppressHydrationWarning>
+      <body suppressHydrationWarning className={`${inter.className} lg:overflow-clip antialiased bg-creme dark:bg-dark-global w-screen h-screen flex flex-col items-center justify-center relative`}>
         <ThemeProviderClient >
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Navbar />

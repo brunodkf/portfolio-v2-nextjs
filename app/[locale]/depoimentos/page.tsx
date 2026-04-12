@@ -2,10 +2,6 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import {Navigation, Pagination, EffectCoverflow, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/autoplay";
-import 'swiper/css/pagination';
 import { useTranslations } from "next-intl";
 
 import { RiDoubleQuotesR } from "react-icons/ri";
@@ -21,8 +17,6 @@ export default function Depoimentos() {
     const t = useTranslations('Feedback');
 
     const feedbacksList: FeedbackItem[] = t.raw('Feedbacks')
-
-    console.log(feedbacksList)
 
     return (
         <main className="container w-full m-auto flex flex-col lg:items-center lg:justify-center text-preto dark:text-branco">
