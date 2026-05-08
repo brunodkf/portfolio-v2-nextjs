@@ -1,19 +1,16 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion';
-import { useTheme } from 'next-themes';
+import { useTheme } from '@/context/ThemeProviderClient';
 
 const HomeAnimation = () => {
+    const { resolvedTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
 
-    const [colorLine, setColorLine] = useState('#dfa47d');
+    useEffect(() => setMounted(true), []);
 
-    const { theme, setTheme } = useTheme();
-
-    useEffect(() => {
-        theme === 'light' ? setColorLine('#1e1e1e') : setColorLine('#dfa47d')
-    }, [theme])
-
+    const strokeColor = mounted && resolvedTheme === 'light' ? '#1e1e1e' : '#dfa47d';
 
     return (
         <motion.svg
@@ -22,22 +19,15 @@ const HomeAnimation = () => {
             viewBox="0 0 200 200"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            initial={{ strokeDashoffset: 300 }}
-            animate={{ strokeDashoffset: 1 }}
-            transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
         >
             <motion.path
                 d="M100 10 L190 55 L190 145 L100 190 L10 145 L10 55 Z"
-                stroke={colorLine}
+                stroke={strokeColor}
                 strokeWidth="1"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeDasharray="150"
-                strokeDashoffset="300"
-                filter="drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.1))"
-                animate={{
-                    strokeDashoffset: [80, 0, 900],
-                }}
+                animate={{ strokeDashoffset: [80, 0, 900] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             />
         </motion.svg>

@@ -13,20 +13,26 @@ export default function Contato() {
 
             <div className="flex flex-col items-center pt-32 lg:pt-0 lg:pb-3">
                 <h1 className={`font-title text-3xl`}>{t("Title")}</h1>
-                <span className="w-10 h-[2px] my-2  bg-branco dark:bg-laranja block rounded"></span>
+                <span className="w-10 h-[2px] my-2 bg-cinza dark:bg-laranja block rounded" />
             </div>
 
             <div className="lg:w-3/4 flex flex-col justify-center text-center">
-                <p className='py-20 text-xl lg:py-4'>{t("Text1")}</p>
+                <p className='py-8 text-xl lg:py-4'>{t("Text1")}</p>
 
-                <Link href={'https://api.whatsapp.com/send?phone=5521971564659&text='} aria-label={`Ir para Whatsapp`} className='bg-cinza dark:bg-laranja  p-3 rounded-xl w-4/5 lg:w-[40%] lg:text-sm m-auto text-branco dark:text-preto uppercase font-bold tracking-wider flex items-center gap-2 justify-center hover:scale-105 transition-all'>
-                    <TiMessages className='text-2xl'/>
+                <Link
+                    href={'https://api.whatsapp.com/send?phone=5521971564659&text='}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Enviar mensagem via WhatsApp"
+                    className='bg-cinza dark:bg-laranja p-3 rounded-xl w-4/5 lg:w-[40%] lg:text-sm m-auto text-branco dark:text-preto uppercase font-bold tracking-wider flex items-center gap-2 justify-center hover:scale-105 hover:brightness-110 transition-all'
+                >
+                    <TiMessages className='text-2xl' />
                     <p>{t("Button")}</p>
                 </Link>
 
-                <p className='py-20 text-xl lg:py-4'>{t("Text2")}</p>
+                <p className='py-8 text-xl lg:py-4'>{t("Text2")}</p>
             </div>
-            
+
         </main>
     )
 }

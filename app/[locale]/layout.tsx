@@ -14,7 +14,6 @@ import Footer from "../components/Footer";
 import BackgroundDetail from "../components/BackgroundDetail";
 import SocialLateral from "../components/SocialLateral";
 
-
 import { ThemeProviderClient } from "@/context/ThemeProviderClient";
 
 const inter = Inter({
@@ -48,11 +47,25 @@ export default async function RootLayout({
 
   const messages = (await import(`../../messages/${locale}.json`)).default;
 
-
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body suppressHydrationWarning className={`${inter.className} lg:overflow-clip antialiased bg-creme dark:bg-dark-global w-screen h-screen flex flex-col items-center justify-center relative`}>
-        <ThemeProviderClient >
+      <head>
+        {/*
+          FOUC prevention — runs synchronously before React hydration.
+          Rendered in a Server Component so React 19 never reconciles it
+          on the client, avoiding the "script tag" warning entirely.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `!function(){try{var t=localStorage.getItem('theme')||'dark';document.documentElement.classList.add(t==='light'?'light':'dark')}catch(e){document.documentElement.classList.add('dark')}}()`,
+          }}
+        />
+      </head>
+      <body
+        suppressHydrationWarning
+        className={`${inter.className} lg:overflow-clip antialiased bg-creme dark:bg-dark-global w-screen h-screen flex flex-col items-center justify-center relative`}
+      >
+        <ThemeProviderClient>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Navbar />
             <section className="mainContent container flex relative">
@@ -63,7 +76,7 @@ export default async function RootLayout({
             <Footer />
             <BackgroundDetail />
           </NextIntlClientProvider>
-        </ThemeProviderClient >
+        </ThemeProviderClient>
       </body>
     </html>
   );

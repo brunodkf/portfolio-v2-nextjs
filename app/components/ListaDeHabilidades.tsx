@@ -12,16 +12,16 @@ import { FiFigma } from "react-icons/fi";
 
 
 const hardSkills = [
-  { name: 'React', icon: <FaReact /> },
-  { name: 'Next', icon: <SiNextdotjs /> },
-  { name: 'Tailwind', icon: <RiTailwindCssFill /> },
-  { name: 'Javascript', icon: <IoLogoJavascript /> },
-  { name: 'Sass', icon: <FaSass /> },
+  { name: 'React',      icon: <FaReact /> },
+  { name: 'Next.js',    icon: <SiNextdotjs /> },
+  { name: 'Tailwind',   icon: <RiTailwindCssFill /> },
+  { name: 'JavaScript', icon: <IoLogoJavascript /> },
+  { name: 'Sass',       icon: <FaSass /> },
   { name: 'TypeScript', icon: <SiTypescript /> },
-  { name: 'HTML', icon: <FaHtml5 /> },
-  { name: 'CSS', icon: <FaCss3Alt /> },
-  { name: 'GIT', icon: <FaGitAlt /> },
-  { name: 'Figma', icon: <FiFigma /> },
+  { name: 'HTML5',      icon: <FaHtml5 /> },
+  { name: 'CSS3',       icon: <FaCss3Alt /> },
+  { name: 'Git',        icon: <FaGitAlt /> },
+  { name: 'Figma',      icon: <FiFigma /> },
 ]
 
 interface ListaDeHabilidadesProps {
@@ -32,8 +32,11 @@ const ListaDeHabilidades: React.FC<ListaDeHabilidadesProps> = ({ view }) => {
   return (
     <ul className={`flex gap-4 text-cinza dark:text-branco ${view}`}>
       {hardSkills?.map((item, index) => (
-        <li key={index} className='text-2xl'>
+        <li key={index} className='text-2xl group relative cursor-default' title={item.name}>
           {item.icon}
+          <span className="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-cinza px-2 py-1 text-xs text-branco opacity-0 transition-opacity group-hover:opacity-100">
+            {item.name}
+          </span>
         </li>
       ))}
     </ul>

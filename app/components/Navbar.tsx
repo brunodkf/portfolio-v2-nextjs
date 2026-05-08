@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { usePathname, useRouter } from '@/i18n/routing';
 import { useParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { useTheme } from "next-themes";
+import { useTheme } from "@/context/ThemeProviderClient";
 
 import Image from 'next/image'
 
@@ -14,10 +14,10 @@ import { HiSun } from "react-icons/hi2";
 import { FaMoon } from "react-icons/fa6";
 import { MdMenu } from "react-icons/md";
 
-
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
+import { menuItems } from '@/data/navigation';
 
 
 export const Navbar = () => {
@@ -34,17 +34,19 @@ export const Navbar = () => {
     }, [locale]);
 
     function ToggleLanguage(i: string) {
-        const newLanguage = i === 'pt' ? 'en' : 'pt';;
+        const newLanguage = i === 'pt' ? 'en' : 'pt';
         router.push(pathname, { locale: newLanguage })
     }
 
-    const [isOn, setIsOn] = useState(false)
+    const { resolvedTheme, setTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
 
-    const { theme, setTheme } = useTheme();
+    useEffect(() => setMounted(true), []);
+
+    const isDark = mounted ? resolvedTheme === 'dark' : false;
 
     const toggleSwitch = () => {
-        setIsOn(!isOn)
-        setTheme(theme === "dark" ? "light" : "dark")
+        setTheme(isDark ? 'light' : 'dark');
     }
 
     const container = {
@@ -62,55 +64,57 @@ export const Navbar = () => {
         height: 20,
     }
 
-    const menuItems = [
-        { name: 'home', path: `/` },
-        { name: 'about', path: '/sobre' },
-        { name: 'projects', path: '/projetos' },
-        { name: 'resume', path: '/docs/BrunoCurriculo.pdf' },
-        { name: 'experience', path: '/experiencia' },
-        { name: 'feedback', path: '/depoimentos' },
-        { name: 'contact', path: '/contato' }
-    ]
-
     const t = useTranslations('Navbar')
 
     const [isOpen, setIsOpen] = useState(false);
 
- 
+    const currentPath = `/${locale}`;
+
+    const isActive = (path: string) => {
+        if (path === '/') return pathname === '/' || pathname === `/${locale}`;
+        return pathname === path || pathname === `/${locale}${path}`;
+    };
+
     return (
         <header className="navbar w-full z-50 absolute top-0 px-4 sm:px-0" >
             <nav className='navbar__container container m-auto py-6 flex items-center justify-between' id="navbar">
 
                 <Link href={`/${locale}/`} className='z-50' onClick={() => setIsOpen(false)}>
-                    <Image src='/logo.webp' alt="Logo Image" className="max-w-16 brightness-0 dark:filter-none" width={100} height={50} />
+                    <Image src='/logo.webp' alt="Bruno Furtado logo" className="max-w-16 brightness-0 dark:filter-none" width={100} height={50} />
                 </Link>
 
                 <div className="flex items-center gap-3">
-                    <button className=' dark:text-laranja flex items-center' onClick={() => ToggleLanguage(language)} aria-label="Toggle language">
+                    <button className='dark:text-laranja flex items-center' onClick={() => ToggleLanguage(language)} aria-label="Toggle language">
                         <IoEarthOutline className='text-xl mr-1' />
                         <p className='uppercase'>{language}</p>
                         <MdOutlineKeyboardArrowDown />
                     </button>
 
-
-                    <button className='toggle-container bg-cinza dark:bg-laranja'
-                        style={{
-                            ...container,
-                            justifyContent: "flex-" + (isOn ? "end" : "start"),
-                        }} onClick={toggleSwitch} aria-label="Toggle Theme">
-
-                        <motion.div className="toggle-handle"
-                            style={handle} layout
-                            transition={{ type: "spring", visualDuration: 0.2, bounce: 0.2, }}>
-
-                                {
-                                    isOn ?  <FaMoon className='bg-laranja text-cinza rounded-full text-2xl p-1' /> : <HiSun className='bg-preto text-laranja rounded-full text-2xl ' />
+                    {!mounted ? (
+                        <div style={{ ...container, background: '#2c2c2c' }} className="rounded-full" />
+                    ) : (
+                        <button
+                            className={`toggle-container ${isDark ? 'bg-laranja' : 'bg-cinza'}`}
+                            style={{
+                                ...container,
+                                justifyContent: isDark ? 'flex-end' : 'flex-start',
+                            }}
+                            onClick={toggleSwitch}
+                            aria-label="Toggle Theme"
+                        >
+                            <motion.div
+                                className="toggle-handle"
+                                style={handle}
+                                layout
+                                transition={{ type: "spring", visualDuration: 0.2, bounce: 0.2 }}
+                            >
+                                {isDark
+                                    ? <FaMoon className='bg-laranja text-cinza rounded-full text-2xl p-1' />
+                                    : <HiSun className='bg-preto text-laranja rounded-full text-2xl' />
                                 }
-                        
-                            
-
-                        </motion.div>
-                    </button>
+                            </motion.div>
+                        </button>
+                    )}
 
                     <MdMenu className='lg:hidden dark:text-laranja text-4xl cursor-pointer z-50' aria-label="Open Menu" onClick={() => setIsOpen(!isOpen)} />
 
@@ -128,15 +132,23 @@ export const Navbar = () => {
                                     transition={{ delay: index * 0.1, duration: 0.4 }}
                                     className="relative group"
                                 >
-                                    <Link href={item.name === 'resume' ? item.path : `/${locale}` + item.path}  aria-label={`Ir para ${item.name}`} className='uppercase  text-lg ' onClick={() => setIsOpen(false)}>
+                                    <Link
+                                        href={item.name === 'resume' ? item.path : `/${locale}${item.path}`}
+                                        aria-label={`Ir para ${item.name}`}
+                                        className={`uppercase text-lg transition-colors ${
+                                            isActive(item.path) ? 'font-bold underline underline-offset-4' : ''
+                                        }`}
+                                        target={item.name === 'resume' ? '_blank' : undefined}
+                                        rel={item.name === 'resume' ? 'noopener noreferrer' : undefined}
+                                        onClick={() => setIsOpen(false)}
+                                    >
                                         {t(item.name)}
-                                        <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-laranja transition-all duration-300 group-hover:w-full"></span>
+                                        <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-cinza dark:bg-laranja transition-all duration-300 group-hover:w-full"></span>
                                     </Link>
                                 </motion.li>
                             ))}
                         </ul>
                     </motion.div>
-
 
                 </div>
             </nav>
@@ -144,4 +156,3 @@ export const Navbar = () => {
         </header>
     )
 }
-

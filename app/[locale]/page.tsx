@@ -14,10 +14,10 @@ export default function Home() {
         <HomeAnimation />
 
         <div className={`font-title absolute inset-0 text-cinza dark:text-branco flex flex-col items-center justify-center`}>
-          <h1 className="text-center text-[80px] md:text-[102px] leading-[80px] md:leading-[100px] ">BRUNO <br /> FURTADO</h1>
-          <p className="mt-4">{t("Subtitle")}</p>
+          <h1 className="text-center text-[80px] md:text-[102px] leading-[80px] md:leading-[100px]">BRUNO <br /> FURTADO</h1>
+          <p className="mt-4 font-sans text-base font-normal">{t("Subtitle")}</p>
         </div>
-        
+
       </div>
 
     </main>

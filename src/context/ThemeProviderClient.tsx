@@ -1,11 +1,46 @@
-"use client";
+'use client';
 
-import { ThemeProvider } from "next-themes";
+import React, { createContext, useContext, useEffect, useState } from 'react';
+
+type Theme = 'dark' | 'light';
+
+interface ThemeContextType {
+  theme: Theme;
+  resolvedTheme: Theme;
+  setTheme: (t: Theme) => void;
+}
+
+const ThemeContext = createContext<ThemeContextType>({
+  theme: 'dark',
+  resolvedTheme: 'dark',
+  setTheme: () => {},
+});
 
 export function ThemeProviderClient({ children }: { children: React.ReactNode }) {
+  const [theme, setThemeState] = useState<Theme>('dark');
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const stored = localStorage.getItem('theme') as Theme | null;
+    setThemeState(stored === 'light' ? 'light' : 'dark');
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+    const root = document.documentElement;
+    root.classList.remove('light', 'dark');
+    root.classList.add(theme);
+    localStorage.setItem('theme', theme);
+  }, [theme, mounted]);
+
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+    <ThemeContext.Provider value={{ theme, resolvedTheme: theme, setTheme: setThemeState }}>
       {children}
-    </ThemeProvider>
+    </ThemeContext.Provider>
   );
+}
+
+export function useTheme(): ThemeContextType {
+  return useContext(ThemeContext);
 }
