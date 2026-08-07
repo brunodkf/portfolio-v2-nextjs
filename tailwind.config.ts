@@ -23,8 +23,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", ...fontFamily.sans],
-        title: ["Antonio", "sans-serif"],
+        sans: ["var(--font-inter)", ...fontFamily.sans],
+        title: ["var(--font-antonio)", "sans-serif"],
+        mono: ["var(--font-jetbrains-mono)", ...fontFamily.mono],
       },
       colors: {
 
@@ -43,7 +44,8 @@ export default {
         laranja2: "#df8e3a",
         preto: "#1e1e1e",
         branco: "#ededed",
-        
+        verde: "#7ec98f",
+
       },
     },
   },

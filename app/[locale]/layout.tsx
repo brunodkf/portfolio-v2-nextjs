@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from 'next/font/google';
+import { Antonio, Inter, JetBrains_Mono } from 'next/font/google';
 
 import { NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
@@ -9,15 +9,30 @@ import { routing } from '@/i18n/routing';
 import "./globals.css";
 
 import { Navbar } from "../components/Navbar";
-import MenuLateral from "../components/MenuLateral";
 import Footer from "../components/Footer";
-import BackgroundDetail from "../components/BackgroundDetail";
-import SocialLateral from "../components/SocialLateral";
+import AmbientBackground from "../components/home/AmbientBackground";
 
 import { ThemeProviderClient } from "@/context/ThemeProviderClient";
 
 const inter = Inter({
-  subsets: ['latin'], preload: true
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-inter',
+  preload: true,
+});
+
+const antonio = Antonio({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-antonio',
+  preload: true,
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-jetbrains-mono',
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -48,7 +63,7 @@ export default async function RootLayout({
   const messages = (await import(`../../messages/${locale}.json`)).default;
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning className={`${inter.variable} ${antonio.variable} ${jetbrainsMono.variable}`}>
       <head>
         {/*
           FOUC prevention — runs synchronously before React hydration.
@@ -63,18 +78,14 @@ export default async function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className={`${inter.className} lg:overflow-clip antialiased bg-creme dark:bg-dark-global w-screen h-screen flex flex-col items-center justify-center relative`}
+        className={`${inter.className} antialiased bg-creme dark:bg-dark-global w-full min-h-screen relative`}
       >
         <ThemeProviderClient>
           <NextIntlClientProvider locale={locale} messages={messages}>
+            <AmbientBackground />
             <Navbar />
-            <section className="mainContent container flex relative">
-              <MenuLateral />
-              {children}
-              <SocialLateral />
-            </section>
+            {children}
             <Footer />
-            <BackgroundDetail />
           </NextIntlClientProvider>
         </ThemeProviderClient>
       </body>

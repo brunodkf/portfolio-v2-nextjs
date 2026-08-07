@@ -25,54 +25,58 @@
 
   /* Background Personalizado */
   .bg-dark-global {
-    background-color: #1e1e1e;
-    background-image: radial-gradient(circle, #2c2c2c, #282828, #252525, #212121, #1e1e1e);
+    background-color: #121212;
+    background-image: radial-gradient(circle at 50% 0%, #232323, #191919 40%, #131313 70%, #121212);
   }
 
-  .line {
-    position: relative;
+  .scroll-mt-navbar {
+    scroll-margin-top: 78px;
   }
 
-  .line::before {
+  /* Dot-grid texture — cinematic depth cue behind hero/dark sections */
+  .bg-dot-grid {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .bg-dot-grid-light {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.5) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  /* Vignette — darkens edges so the hero glow reads as a focal point */
+  .vignette-dark::after {
     content: '';
     position: absolute;
-    display: block;
-    width: 3px;
-    height: 3em;
-    top: -4rem;
-    border-radius: 10%;
-    opacity: .7;
-  }
-
-  .line::after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 3px;
-    height: 3em;
-    bottom: -4rem;
-    border-radius: 10%;
-    opacity: .7;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, transparent 40%, rgba(0, 0, 0, 0.35) 100%);
   }
 
 }
 
-.swiper-pagination {
-  position: relative !important;
-  margin-top: 1rem;
+@keyframes glow-breathe {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
 }
-.swiper-pagination-bullet {
-  background: white !important;
-  width: 10px;
-  height: 10px;
-  opacity: 0.5;
-  transition: all 0.3s ease;
+
+.glow-breathe {
+  animation: glow-breathe 6s ease-in-out infinite;
 }
-.swiper-pagination-bullet-active {
-  background: #dfa47d !important;
-  width: 14px;
-  height: 14px;
-  opacity: 1;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes hexdraw {
+  0% { stroke-dashoffset: 1600; }
+  60% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.hex-draw {
+  stroke-dasharray: 1600;
+  animation: hexdraw 3.2s ease-in-out forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {

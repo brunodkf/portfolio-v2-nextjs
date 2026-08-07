@@ -1,9 +1,9 @@
 export const menuItems = [
-  { name: 'home',       path: '/' },
-  { name: 'about',      path: '/sobre' },
-  { name: 'projects',   path: '/projetos' },
-  { name: 'resume',     path: '/docs/BrunoCurriculo.pdf' },
-  { name: 'experience', path: '/experiencia' },
-  { name: 'feedback',   path: '/depoimentos' },
-  { name: 'contact',    path: '/contato' },
+  { name: 'home', hash: 'hero' },
+  { name: 'cases', hash: 'casos' },
+  { name: 'experience', hash: 'experiencia' },
+  { name: 'about', hash: 'sobre' },
+  { name: 'contact', hash: 'contato' },
 ] as const;
+
+export const resumePath = '/docs/BrunoCurriculo.pdf';
