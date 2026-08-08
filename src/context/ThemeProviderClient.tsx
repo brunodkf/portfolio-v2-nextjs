@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
+import { MotionConfig } from 'framer-motion';
 
 type Theme = 'dark' | 'light';
 
@@ -35,7 +36,9 @@ export function ThemeProviderClient({ children }: { children: React.ReactNode })
 
   return (
     <ThemeContext.Provider value={{ theme, resolvedTheme: theme, setTheme: setThemeState }}>
-      {children}
+      {/* Global safety net: every motion.* animation site-wide automatically
+          honors the OS-level prefers-reduced-motion setting. */}
+      <MotionConfig reducedMotion="user">{children}</MotionConfig>
     </ThemeContext.Provider>
   );
 }

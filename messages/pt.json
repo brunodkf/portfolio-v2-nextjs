@@ -1,138 +1,159 @@
 {
-  "HomePage": {
-    "Subtitle": "Desenvolvedor Frontend | UX / UI Designer"
-  },
   "Navbar": {
     "home": "Início",
-    "about": "Sobre",
-    "projects": "Projetos",
-    "resume": "Resumo",
+    "cases": "Casos",
     "experience": "Experiência",
-    "contact": "Contato",
-    "feedback": "Depoimentos"
+    "about": "Sobre",
+    "contact": "Contato"
   },
-  "About": {
-    "Title": "Sobre",
-    "CardTitle1": "Desenvolvimento Web",
-    "CardDescription1": "Produção de websites dinâmicos e responsivos",
-    "CardTitle2": "UX/UI Design",
-    "CardDescription2": "Wireframes e protótipos para representação do produto digital",
-    "CardTitle3": "SEO",
-    "CardDescription3": "Desempenho, posicionamento on search e boas práticas",
-    "Description": " Durante minha carreira, tive a oportunidade de trabalhar em diversos projetos desafiadores que me permitiram aprimorar minhas habilidades técnicas e de comunicação. Minha experiência inclui o desenvolvimento de interfaces de usuário altamente responsivas e intuitivas, utilizando as mais recentes práticas e tecnologias do mercado e também a aplicação de testes automatizamos assegurando a qualidade de software."
+  "Hero": {
+    "Badge": "Disponível — Sênior · Remoto",
+    "BadgeMobile": "Disponível · Sênior",
+    "Role": "Frontend Engineer · Produto & Design Systems",
+    "RoleMobile": "Frontend Engineer · Produto",
+    "Tagline": "Construo interfaces rápidas e acessíveis que convertem — da arquitetura ao pixel.",
+    "TaglineMobile": "Interfaces rápidas e acessíveis que convertem — da arquitetura ao pixel.",
+    "CTAPrimary": "Ver estudos de caso",
+    "CTASecondary": "Baixar CV",
+    "Location": "Rio de Janeiro, BR · GMT−3"
   },
-  "Projects": {
-    "Title": "Projetos",
-    "Button": "Confira"
+  "Proof": {
+    "Stats": [
+      { "Value": "200+", "Label": "páginas em produção", "LabelMobile": "páginas prod." },
+      { "Value": "90+", "Label": "Lighthouse médio", "LabelMobile": "Lighthouse" },
+      { "Value": "5", "Label": "anos de estrada", "LabelMobile": "anos" },
+      { "Value": "15+", "Label": "projetos entregues", "LabelMobile": "projetos" }
+    ]
+  },
+  "CaseStudies": {
+    "Eyebrow": "01 /",
+    "Title": "Estudos de caso",
+    "Intro": "Problema → decisão → resultado. O que fiz, por que escolhi assim, e o número que saiu disso.",
+    "ViewSite": "Ver site →",
+    "ViewRepo": "Repositório →",
+    "ViewCase": "Ver estudo →",
+    "Case1": {
+      "Tags": ["Next.js", "TypeScript", "Tailwind"],
+      "TagsMobile": ["Next.js", "TS"],
+      "Name": "StartCrypto",
+      "Domain": "startscrypto.com.br",
+      "Meta": "Frontend & UX · Freelance · 2024",
+      "MetaMobile": "Frontend & UX · 2024",
+      "ProblemLabel": "PROBLEMA",
+      "Problem": "Curso de cripto sem página de vendas; conversão dependia de indicação e o autor não conseguia escalar inscrições.",
+      "ProblemMobile": "Curso sem página de vendas; não escalava inscrições.",
+      "DecisionLabel": "DECISÃO & TRADE-OFF",
+      "Decision": "Estrutura de copy visual orientada a conversão + Next.js estático para LCP baixo. Abri mão de CMS (menos flexível) em favor de velocidade e SEO — o certo para uma LP de campanha.",
+      "Stat1Value": "1.1s",
+      "Stat1Label": "LCP mobile",
+      "Stat1LabelMobile": "LCP",
+      "Stat2Value": "0→",
+      "Stat2Label": "vendas online",
+      "Stat2LabelMobile": "vendas",
+      "ViewRepoMobile": "Repo →",
+      "Link": "https://startscrypto.com.br/"
+    },
+    "Case2": {
+      "Tags": ["HTML5", "Sass", "SEO local"],
+      "Name": "LA Medic Rio",
+      "Domain": "lamedicrio.com",
+      "Meta": "Frontend & SEO · Freelance · 2023",
+      "MetaMobile": "HTML · Sass · SEO",
+      "ProblemLabel": "PROBLEMA",
+      "Problem": "Empresa de equipamentos médicos sem presença digital; precisava transmitir credibilidade e ser achada por buscas locais.",
+      "DecisionLabel": "DECISÃO & TRADE-OFF",
+      "Decision": "Site institucional semântico com dados estruturados e SEO on-page, sem framework pesado. Priorizei tempo de carga e indexação sobre interatividade — o público chega pelo Google, não por app.",
+      "Stat1Value": "1ª pág.",
+      "Stat1Label": "busca local",
+      "Stat2Value": "100%",
+      "Stat2Label": "SEO Lighthouse",
+      "Link": "https://lamedicrio.com/"
+    },
+    "Compact1": { "Name": "Streaming App", "Meta": "React · Tailwind · consumo de API", "Link": "https://streaming-opal.vercel.app/" },
+    "Compact2": { "Name": "NewLife Fitness", "Meta": "HTML · Sass · institucional", "Link": "https://newlifefit.netlify.app/" }
   },
   "Experience": {
+    "Eyebrow": "02 /",
     "Title": "Experiência",
-    "Job": "Responsibilidades",
-    "Experiences": [
+    "Items": [
       {
         "Title": "H&W Publishing",
-        "Position": "Desenvolvedor Frontend Pleno",
-        "Date": "Jun 2025 - Atualmente",
-        "Description": "Desenvolvimento de landing pages e VSLs de alta conversão para empresa americana, focando em performance, acessibilidade e otimização de conversão.",
-        "Responsibilities": [
-          "Desenvolvimento e entrega de mais de 200 landing pages e VSLs utilizando HTML, CSS, JavaScript, Bootstrap 5, Next.js e TypeScript.",
-          "Manutenção de pontuação Lighthouse acima de 80 em performance, acessibilidade e SEO.",
-          "Implementação de estratégias de A/B Testing e backredirect para otimização de CRO.",
-          "Desenvolvimento de fluxos completos de conversão com foco em UX orientada a resultado.",
-          "Aplicação de boas práticas de SEO on-page e componentização com Next.js + TypeScript."
-        ]
+        "Date": "Jun 2025 — Atual",
+        "Role": "Frontend Engineer",
+        "Description": "Liderei a entrega de 200+ landing pages e VSLs de alta conversão para o mercado americano — mantendo Lighthouse acima de 80 em performance, acessibilidade e SEO, e conduzindo testes A/B e estratégias de CRO com componentização em Next.js + TypeScript.",
+        "DescriptionMobile": "200+ LPs de alta conversão, Lighthouse 80+, CRO e A/B em Next.js.",
+        "Highlight": "200+ landing pages e VSLs",
+        "Muted": false
       },
       {
         "Title": "Freelancer",
-        "Position": "Desenvolvedor Web",
-        "Date": "Jan 2020 - Atualmente",
-        "Description": "Desenvolvimento e entrega de projetos web para diversos clientes, abrangendo plataformas educacionais, B2B e e-commerce, com ênfase em conversão, performance e manutenção.",
-        "Responsibilities": [
-          "Desenvolvimento de mais de 15 projetos web utilizando React.js, Next.js, Tailwind CSS e JavaScript.",
-          "Criação de site de vendas para curso de criptomoedas (StartCrypto), focado em conversão e copy visual.",
-          "Desenvolvimento de site institucional para empresa de equipamentos médicos (La Medic Rio), com ênfase em credibilidade e SEO local.",
-          "Construção de plataforma web com dashboard para alunos (On Training), integrando área de membros e gestão de conteúdo.",
-          "Responsável pelo ciclo completo: requisitos, design, desenvolvimento, deploy e manutenção."
-        ]
+        "Date": "Jan 2020 — Atual",
+        "Role": "Web Developer · ciclo completo",
+        "Description": "15+ projetos em React, Next.js e Tailwind — de sites de conversão (StartCrypto) a plataformas com área de membros e dashboard (On Training). Responsável de ponta a ponta: requisitos, design, desenvolvimento, deploy e manutenção.",
+        "DescriptionMobile": "15+ projetos ponta a ponta em React e Next.js.",
+        "Highlight": "15+ projetos",
+        "Muted": false
       },
       {
         "Title": "Lumis",
-        "Position": "Desenvolvedor Web Front End",
-        "Date": "Ago 2022 - Ago 2023",
-        "Description": "Desenvolvimento de interfaces digitais responsivas e acessíveis para soluções corporativas, com foco em performance e colaboração multidisciplinar.",
-        "Responsibilities": [
-          "Desenvolvimento de interfaces responsivas e acessíveis utilizando HTML5, CSS3, SASS e JavaScript.",
-          "Criação e manutenção de biblioteca de componentes reutilizáveis para consistência visual.",
-          "Otimização de performance com Google Lighthouse e PageSpeed Insights.",
-          "Garantia de acessibilidade conforme padrões WCAG e aplicação de SEO on-page.",
-          "Colaboração com equipes multidisciplinares na plataforma DXP corporativa."
-        ]
+        "Date": "Ago 2022 — Ago 2023",
+        "Role": "Front-End Web Developer",
+        "Description": "Criei e mantive uma biblioteca de componentes reutilizáveis para consistência visual na plataforma DXP corporativa, garantindo acessibilidade WCAG e otimizando performance em times multidisciplinares.",
+        "DescriptionMobile": "Biblioteca de componentes, WCAG e performance na DXP.",
+        "Highlight": "biblioteca de componentes reutilizáveis",
+        "Muted": false
       },
       {
-        "Title": "Lumis",
-        "Position": "Estagiário de Desenvolvimento Web",
-        "Date": "Nov 2021 - Ago 2022",
-        "Description": "Tradução de designs UX/UI em código interativo e integração com sistemas de CRM para captura de leads.",
-        "Responsibilities": [
-          "Criação de layouts responsivos e tradução de designs em código.",
-          "Implementação de SEO e desenvolvimento em plataforma DXP.",
-          "Integração com HubSpot CRM para captura de leads."
-        ]
-      },
-      {
-        "Title": "Go! Telecom",
-        "Position": "Analista de Redes",
-        "Date": "Fev 2021 - Ago 2021",
-        "Description": "Monitoramento e manutenção da infraestrutura de rede, incluindo atualização de hardware e software.",
-        "Responsibilities": [
-          "Monitoramento de desempenho e manutenção da infraestrutura de rede.",
-          "Atualização de hardware e software (switches e roteadores)."
-        ]
+        "Title": "Lumis · Estágio ↔ Go! Telecom · Redes",
+        "Date": "2021 — 2022",
+        "Role": "",
+        "Description": "Primeiros passos: tradução de designs UX/UI em código, integração com CRM (HubSpot) e base sólida em infraestrutura.",
+        "Highlight": "",
+        "Muted": true
       }
+    ]
+  },
+  "About": {
+    "Eyebrow": "03 /",
+    "Title": "Sobre",
+    "Paragraphs": [
+      "Sou frontend engineer há cinco anos, na fronteira entre engenharia e design — onde decisões de UX viram código de produção.",
+      "Gosto de tratar performance e conversão como problema de engenharia, não de sorte. Já entreguei centenas de páginas de alta conversão para um cliente nos EUA e construí do zero plataformas com área de membros e dashboards.",
+      "Componentizo cedo, meço o que entrego e trato acessibilidade como requisito — não como enfeite."
+    ],
+    "ParagraphMobile": "Frontend engineer na fronteira entre engenharia e design — onde UX vira código de produção.",
+    "ComoTrabalho": {
+      "Label": "Como trabalho",
+      "Items": [
+        { "Number": "01", "Title": "Sistema antes de tela", "Description": "componentes, tokens e padrões que escalam." },
+        { "Number": "02", "Title": "Performance é UX", "Description": "LCP, bundle e Core Web Vitals fazem parte do design." },
+        { "Number": "03", "Title": "Acessibilidade não é opcional", "Description": "WCAG, teclado e contraste por padrão." },
+        { "Number": "04", "Title": "Meço o impacto", "Description": "cada entrega tem um número atrás." }
+      ]
+    },
+    "Tags": ["React", "Next.js", "TypeScript", "Tailwind", "Sass", "Figma", "Framer Motion"]
+  },
+  "Testimonials": {
+    "Items": [
+      { "Name": "Rodrigo Marques", "Position": "Fundador · Start Crypto", "Quote": "Bruno entendeu a demanda de primeira e entregou o site exatamente como eu precisava, sem retrabalho. Tirou meu sonho do papel." },
+      { "Name": "Thayane Fabiano", "Position": "Product Designer · Lumis", "Quote": "Trabalhar com o Bruno me ajudou a entender mais de desenvolvimento e a ser uma designer melhor. Dedicação e colaboração que deixam ótima impressão." }
     ]
   },
   "Contact": {
-    "Title": "Contato",
-    "Text1": "Tem um projeto em mente ou precisa de um desenvolvedor frontend para sua equipe? Vamos conversar!",
-    "Button": "Me envie uma mensagem",
-    "Text2": "Estou à disposição para discutir ideias e encontrar a melhor solução para o seu negócio! 🚀"
-  },
-  "Feedback": {
-    "Title": "Depoimentos",
-    "SubTitle": "Veja o que meus clientes e parceiros dizem sobre meu trabalho!",
-    "TextIntro": "Cada projeto é único, e meu compromisso é entregar soluções eficientes, otimizadas e bem estruturadas. Veja o que dizem sobre a experiência de trabalhar comigo.",
-    "Feedbacks": [
-      {
-        "Name": "Anderson Nascimento",
-        "Position": "Sócio Fundador | LA Medic Rio",
-        "Text": "Grande Bruno, muito obrigado por desenvolver o site da minha empresa. Com certeza é mais uma realização de um sonho pra todos nós. O site tem sido um sucesso e de grande valia."
-      },
-      {
-        "Name": "Rodrigo Marques",
-        "Position": "Instrutor e Fundador | Start Crypto",
-        "Text": "Bruno é um ótimo profissional e conseguiu tirar meu sonho e objetivo do papel de anos! Conversamos, e logo ele entendeu a demanda e do q eu precisava. De primeira ele acertou e entregou o site sem precisar fazer alteração. Foi exatamente da forma q eu precisava e queria! Obrigado Bruno por tirar meu sonho do papel! Estamos juntos!"
-      },
-      {
-        "Name": "Thayane Fabiano",
-        "Position": "UX UI Designer | Product Designer",
-        "Text": "Trabalhar com o Bruno na Lumis me ajudou muito a entender mais sobre desenvolvimento e me tornar uma designer melhor. Sua disposição de aprender, colaborar e dedicação para entregar o melhor resultado possível causaram uma excelente impressão em mim."
-      
-      },
-      {
-        "Name": "Luis Fernando",
-        "Position": "Sócio Fundador | LA Medic Rio",
-        "Text": "É a realização de uma vontade de muito tempo, Bruno ajudou a gente a entender o processo entre imaginar e realizar, dai pra frente é só história. Estou muito feliz com o resultado!"
-      },
-      {
-        "Name": "Bruna Gomes",
-        "Position": "Social Media | Branding | Inbound Marketing",
-        "Text": "Bruno é um profissional muito dedicado e solicito. Atuamos juntos em diversos projetos, onde ele demonstrou muita eficiência e agilidade, além de sempre entregar um bom serviço."
-      },
-      {
-        "Name": "Daniel Clemente",
-        "Position": "Graphic Designer | Motion Designer",
-        "Text": "Tive o prazer de trabalhar com o Bruno quando ele atuava no time de Marketing da Lumis. Bruno sempre foi muito solícito e mostrava domínio sobre o que fazia e falava. Com ele, conseguia compreender melhor sobre desenvolvimento e sobre como a nossa área trabalhava em conjunto."
-      }
-    ]
+    "Badge": "Disponível para novas oportunidades",
+    "BadgeMobile": "Disponível",
+    "TitleLine1": "Aberto a posições",
+    "TitleLine2": "Frontend Sênior",
+    "TitleMobile": "Aberto a posições sênior",
+    "Paragraph": "Projetos de produto, times de design system, ou uma boa conversa sobre performance e UX. Respondo em até 24h.",
+    "ParagraphMobile": "Produto, design systems, ou uma conversa sobre performance. Respondo em 24h.",
+    "Email": "bruno.furtado@email.com",
+    "CopyLabel": "copiar",
+    "CopiedLabel": "copiado ✓",
+    "CopyButtonMobile": "Copiar e-mail",
+    "LinkedIn": "LinkedIn →",
+    "CV": "Baixar CV →",
+    "CVMobile": "CV →",
+    "Or": "ou WhatsApp"
   }
 }
