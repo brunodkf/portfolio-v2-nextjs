@@ -35,7 +35,7 @@ const ListaRouters = () => {
           >
             <Link
               href={item.name === 'resume' ? item.path : `/${locale}${item.path}`}
-              aria-label={`Ir para ${item.name}`}
+              aria-label={`${t("goTo")} ${t(item.name)}`}
               target={item.name === 'resume' ? '_blank' : undefined}
               rel={item.name === 'resume' ? 'noopener noreferrer' : undefined}
               className={`uppercase text-sm transition-colors ${

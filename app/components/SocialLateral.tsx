@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import React from 'react'
 
 import { FaInstagram } from "react-icons/fa";
@@ -18,6 +19,8 @@ const menuSocials = [
 
 
 const SocialLateral = () => {
+  const t = useTranslations('SocialLateral')
+
   return (
     <aside className="hidden w-10 lg:flex flex-col justify-center items-center absolute h-full right-0 text-cinza dark:text-white">
       <ul className="space-y-2 line before:right-2.5 after:right-2.5 before:bg-cinza dark:before:bg-branco after:bg-cinza dark:after:bg-branco">
@@ -34,7 +37,7 @@ const SocialLateral = () => {
               href={item.path}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`Visitar perfil no ${item.name}`}
+              aria-label={t("VisitProfile", { name: item.name })}
               className='uppercase text-2xl block p-0.5'
             >
               {item.icon}

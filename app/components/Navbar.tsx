@@ -134,7 +134,7 @@ export const Navbar = () => {
                                 >
                                     <Link
                                         href={item.name === 'resume' ? item.path : `/${locale}${item.path}`}
-                                        aria-label={`Ir para ${item.name}`}
+                                        aria-label={`${t("goTo")} ${t(item.name)}`}
                                         className={`uppercase text-lg transition-colors ${
                                             isActive(item.path) ? 'font-bold underline underline-offset-4' : ''
                                         }`}

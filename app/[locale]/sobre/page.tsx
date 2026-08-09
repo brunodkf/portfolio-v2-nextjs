@@ -27,7 +27,7 @@ export default function Sobre() {
                         className="lg:w-1/3 bg-preto dark:bg-cinza shadow-lg rounded-md flex flex-col items-center justify-between py-8 px-2 text-center hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
                         initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: .5 }}
                     >
-                        <Image src={'/icons/coding.webp'} width={45} height={45} alt="Ícone de desenvolvimento web" />
+                        <Image src={'/icons/coding.webp'} width={45} height={45} alt={t("CardIcon1Alt")} />
                         <h2 className="font-medium my-3">{t("CardTitle1")}</h2>
                         <p className="font-thin">{t("CardDescription1")}</p>
                     </motion.li>
@@ -36,7 +36,7 @@ export default function Sobre() {
                         className="lg:w-1/3 bg-preto dark:bg-cinza shadow-lg rounded-md flex flex-col items-center justify-between py-8 px-2 text-center hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
                         initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: .8 }}
                     >
-                        <Image src={'/icons/caneta.webp'} width={45} height={45} alt="Ícone de UX/UI design" />
+                        <Image src={'/icons/caneta.webp'} width={45} height={45} alt={t("CardIcon2Alt")} />
                         <h2 className="font-medium my-3">{t("CardTitle2")}</h2>
                         <p className="font-thin">{t("CardDescription2")}</p>
                     </motion.li>
@@ -45,7 +45,7 @@ export default function Sobre() {
                         className="lg:w-1/3 bg-preto dark:bg-cinza shadow-lg rounded-md flex flex-col items-center justify-between py-8 px-2 text-center hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
                         initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 1 }}
                     >
-                        <Image src={'/icons/search.webp'} width={45} height={45} alt="Ícone de pesquisa e SEO" />
+                        <Image src={'/icons/search.webp'} width={45} height={45} alt={t("CardIcon3Alt")} />
                         <h2 className="font-medium my-3">{t("CardTitle3")}</h2>
                         <p className="font-thin">{t("CardDescription3")}</p>
                     </motion.li>

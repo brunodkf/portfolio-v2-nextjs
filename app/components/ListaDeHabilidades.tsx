@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaReact } from "react-icons/fa";
-import { SiNextdotjs } from "react-icons/si";
+import { SiNextdotjs, SiSvelte } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaSass } from "react-icons/fa";
@@ -14,10 +14,11 @@ import { FiFigma } from "react-icons/fi";
 const hardSkills = [
   { name: 'React',      icon: <FaReact /> },
   { name: 'Next.js',    icon: <SiNextdotjs /> },
+  { name: 'Svelte',     icon: <SiSvelte /> },
   { name: 'Tailwind',   icon: <RiTailwindCssFill /> },
+  { name: 'TypeScript', icon: <SiTypescript /> },
   { name: 'JavaScript', icon: <IoLogoJavascript /> },
   { name: 'Sass',       icon: <FaSass /> },
-  { name: 'TypeScript', icon: <SiTypescript /> },
   { name: 'HTML5',      icon: <FaHtml5 /> },
   { name: 'CSS3',       icon: <FaCss3Alt /> },
   { name: 'Git',        icon: <FaGitAlt /> },

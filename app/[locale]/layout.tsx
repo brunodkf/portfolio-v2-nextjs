@@ -20,13 +20,39 @@ const inter = Inter({
   subsets: ['latin'], preload: true
 });
 
-export const metadata: Metadata = {
-  title: "Bruno Furtado",
-  description: "Transformo código em experiências incríveis! Sou um dev front-end apaixonado por design e interatividade. Veja meus projetos!",
-  icons: {
-    icon: "/favicon.ico",
-  },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const safeLocale = routing.locales.includes(locale as (typeof routing.locales)[number])
+    ? locale
+    : routing.defaultLocale;
+  const messages = (await import(`../../messages/${safeLocale}.json`)).default;
+  const { Title, Description } = messages.Metadata;
+
+  return {
+    title: Title,
+    description: Description,
+    icons: {
+      icon: "/favicon.ico",
+    },
+    openGraph: {
+      title: Title,
+      description: Description,
+      locale: safeLocale,
+      type: "profile",
+      images: ["/logo.webp"],
+    },
+    twitter: {
+      card: "summary",
+      title: Title,
+      description: Description,
+      images: ["/logo.webp"],
+    },
+  };
+}
 
 export default async function RootLayout({
   children,
@@ -50,11 +76,6 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        {/*
-          FOUC prevention — runs synchronously before React hydration.
-          Rendered in a Server Component so React 19 never reconciles it
-          on the client, avoiding the "script tag" warning entirely.
-        */}
         <script
           dangerouslySetInnerHTML={{
             __html: `!function(){try{var t=localStorage.getItem('theme')||'dark';document.documentElement.classList.add(t==='light'?'light':'dark')}catch(e){document.documentElement.classList.add('dark')}}()`,

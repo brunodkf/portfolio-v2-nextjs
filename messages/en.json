@@ -1,6 +1,10 @@
 {
+  "Metadata": {
+    "Title": "Bruno Furtado — Frontend Engineer",
+    "Description": "Frontend Engineer with 6+ years of experience in React, Next.js, TypeScript and Svelte. Working on web applications, Design Systems and frontend architecture."
+  },
   "HomePage": {
-    "Subtitle": "Frontend Developer | UX / UI Designer"
+    "Subtitle": "Frontend Engineer — interfaces, architecture and Design Systems"
   },
   "Navbar": {
     "home": "Home",
@@ -9,98 +13,120 @@
     "resume": "Resume",
     "experience": "Experience",
     "contact": "Contact",
-    "feedback": "Feedback"
+    "feedback": "Feedback",
+    "goTo": "Go to"
   },
   "About": {
     "Title": "About",
-    "CardTitle1": "Web Development",
-    "CardDescription1": "Production of dynamic and responsive websites",
-    "CardTitle2": "UX/UI Design",
-    "CardDescription2": "Wireframes and prototypes to represent the digital product",
-    "CardTitle3": "SEO",
-    "CardDescription3": "Performance, search positioning and best practices",
-    "Description": " Throughout my career, I have had the opportunity to work on various challenging projects that have allowed me to enhance my technical and communication skills. My experience includes developing highly responsive and intuitive user interfaces, utilizing the latest industry practices and technologies, as well as implementing automated testing to ensure software quality."
+    "CardTitle1": "Web Applications",
+    "CardDescription1": "Building and evolving real web applications, from scratch and inside existing codebases.",
+    "CardIcon1Alt": "Web application development icon",
+    "CardTitle2": "Design Systems",
+    "CardDescription2": "Component architecture, visual consistency and evolving UI libraries used in production.",
+    "CardIcon2Alt": "Design Systems and componentization icon",
+    "CardTitle3": "Performance & Quality",
+    "CardDescription3": "Web Vitals, accessibility and technical SEO best practices applied day to day.",
+    "CardIcon3Alt": "Performance and quality icon",
+    "Description": "I've been working in frontend since 2019, across corporate platforms, conversion-focused products and, more recently, AI-driven SaaS applications. I have strong experience with React and Next.js, and today I also work with Svelte and SvelteKit as part of my regular stack — not as something I'm just exploring. Much of my recent work is tied to Design Systems: evolving component libraries, keeping consistency across teams, and balancing architecture decisions with the actual user experience. I like stepping into existing codebases, understanding what's already there, and evolving the product without breaking what works."
   },
   "Projects": {
     "Title": "Projects",
-    "Button": "View Project"
+    "Button": "View Project",
+    "ScreenshotAlt": "Screenshot of the {name} project",
+    "List": [
+      {
+        "name": "StartCrypto",
+        "description": "Sales site for a cryptocurrency course, focused on conversion.",
+        "stacks": "React | Next.js | TailwindCSS | TypeScript"
+      },
+      {
+        "name": "LA Medic Rio",
+        "description": "Institutional site for a medical equipment distributor, focused on credibility and local SEO.",
+        "stacks": "HTML | Sass | JavaScript"
+      },
+      {
+        "name": "Streaming APP",
+        "description": "Streaming-style interface built to explore componentization in React.",
+        "stacks": "React | Tailwind CSS | JavaScript"
+      },
+      {
+        "name": "NewLife Fitness",
+        "description": "Institutional site for a gym, covering plans and class offerings.",
+        "stacks": "HTML | Sass | JavaScript"
+      }
+    ]
   },
   "Experience": {
     "Title": "Experience",
     "Job": "Responsibilities",
     "Experiences": [
       {
-        "Title": "H&W Publishing",
+        "Title": "Begen",
         "Position": "Mid-Level Frontend Engineer",
-        "Date": "Jun 2025 - Present",
-        "Description": "Development of high-converting landing pages and VSLs for an American company, focusing on performance, accessibility, and conversion optimization.",
+        "Date": "2026 – Present",
+        "Description": "Building web applications in SvelteKit for AI-powered SaaS products, focused on maintainable code and evolving a Design System in production.",
         "Responsibilities": [
-          "Development and delivery of over 200 landing pages and VSLs using HTML, CSS, JavaScript, Bootstrap 5, Next.js, and TypeScript.",
-          "Maintaining Lighthouse scores above 80 in performance, accessibility, and SEO.",
-          "Implementation of A/B Testing and backredirect strategies for CRO optimization.",
-          "Development of complete conversion flows with a focus on result-oriented UX.",
-          "Application of on-page SEO best practices and componentization with Next.js + TypeScript."
+          "Evolving the internal Design System (OCC): migrating and standardizing components to improve visual consistency and reduce maintenance effort across teams.",
+          "Building the Media Plan system for digital media — CRUDs, complex forms, validation, polling and async flows integrated with REST APIs.",
+          "Creating reusable components and refactoring legacy code to improve frontend architecture quality.",
+          "Managing state with Svelte 5 (runes) and integrating with REST APIs.",
+          "Working directly with Product Designers, Backend and QA to define flows and resolve complex bugs.",
+          "Code review and adoption of best practices to sustain performance and consistency across the product."
+        ]
+      },
+      {
+        "Title": "H&W Publishing",
+        "Position": "Frontend Developer",
+        "Date": "2025 – 2026",
+        "Description": "Building and maintaining web applications in Next.js, React and TypeScript, focused on performance, technical SEO and conversion.",
+        "Responsibilities": [
+          "Built and maintained applications in Next.js, React and TypeScript, focused on componentization and code reuse.",
+          "Optimized performance and Core Web Vitals, keeping Lighthouse scores above 80 in performance, accessibility and SEO.",
+          "Implemented on-page technical SEO and accessibility best practices.",
+          "Built responsive, high-converting interfaces, translating business requirements into products that stayed consistent across devices.",
+          "Applied A/B testing and CRO to inform data-driven UX decisions."
         ]
       },
       {
         "Title": "Freelancer",
         "Position": "Web Developer",
-        "Date": "Jan 2020 - Present",
-        "Description": "Development and delivery of web projects for various clients, encompassing educational platforms, B2B and e-commerce, with an emphasis on conversion, performance and maintenance.",
+        "Date": "2020 – Present",
+        "Description": "Responsible for the full lifecycle of web projects for clients across different industries, from architecture through deployment and maintenance.",
         "Responsibilities": [
-          "Development of more than 15 web projects using React.js, Next.js, Tailwind CSS and JavaScript.",
-          "Creation of a sales website for a cryptocurrency course (StartCrypto), focused on conversion and visual copy.",
-          "Development of an institutional website for a medical equipment company (LA Medic Rio), with an emphasis on credibility and local SEO.",
-          "Building a web platform with a dashboard for students (On Training), integrating a members area and content management.",
-          "Responsible for the complete cycle: requirements, design, development, deployment and maintenance."
+          "Responsible for the complete project cycle — requirements, architecture, development, deployment and maintenance — using React, Next.js and TypeScript.",
+          "Delivered 20+ projects across different industries (education, crypto and institutional), adapting architecture and stack to each business context.",
+          "Built a platform with a members area and dashboard for content management, integrating the frontend with REST APIs and authentication flows.",
+          "Focused on performance, responsiveness and SEO to maximize conversion and reach for delivered products."
         ]
       },
       {
         "Title": "Lumis",
-        "Position": "Front-End Web Developer",
-        "Date": "Aug 2022 - Aug 2023",
-        "Description": "Development of responsive and accessible digital interfaces for corporate solutions, focusing on performance and multidisciplinary collaboration.",
+        "Position": "Front-End Web Developer · Intern → Full-time",
+        "Date": "2021 – 2023",
+        "Description": "Built responsive, accessible interfaces for a corporate DXP platform, progressing from intern to full-time throughout the role.",
         "Responsibilities": [
-          "Development of responsive and accessible interfaces using HTML5, CSS3, SASS, and JavaScript.",
-          "Creation and maintenance of a library of reusable components for visual consistency.",
-          "Performance optimization with Google Lighthouse and PageSpeed Insights.",
-          "Ensuring accessibility according to WCAG standards and applying on-page SEO.",
-          "Collaboration with multidisciplinary teams on the corporate DXP platform."
-        ]
-      },
-      {
-        "Title": "Lumis",
-        "Position": "Web Development Intern",
-        "Date": "Nov 2021 - Aug 2022",
-        "Description": "Translation of UX/UI designs into interactive code and integration with CRM systems for lead capture.",
-        "Responsibilities": [
-          "Creation of responsive layouts and translation of designs into code.",
-          "SEO implementation and development on the DXP platform.",
-          "Integration with HubSpot CRM for lead capture."
-        ]
-      },
-      {
-        "Title": "Go! Telecom",
-        "Position": "Network Analyst",
-        "Date": "Feb 2021 - Aug 2021",
-        "Description": "Monitoring and maintenance of network infrastructure, including hardware and software updates.",
-        "Responsibilities": [
-          "Performance monitoring and maintenance of network infrastructure.",
-          "Hardware and software updates (switches and routers)."
+          "Built responsive and accessible interfaces using HTML5, CSS3, SASS and JavaScript on a corporate DXP platform.",
+          "Created and maintained a library of reusable components, speeding up new demands and standardizing visual identity.",
+          "Implemented on-page SEO and WCAG accessibility compliance, improving indexing and organic reach.",
+          "Collaborated with multidisciplinary teams translating UX/UI designs into user-centered products, including HubSpot CRM integration for lead capture."
         ]
       }
     ]
   },
   "Contact": {
     "Title": "Contact",
-    "Text1": "Got a project in mind or need a frontend developer for your team? Let’s talk!",
+    "Text1": "Have a project in mind or need a Frontend Engineer for your team? Let's talk.",
     "Button": "Send me a message",
-    "Text2": "I’m ready to discuss ideas and find the best solution for your business! 🚀"
+    "Text2": "I'm happy to talk through the project and see how I can help.",
+    "WhatsappAria": "Send a message via WhatsApp"
+  },
+  "SocialLateral": {
+    "VisitProfile": "Visit {name} profile"
   },
   "Feedback": {
     "Title": "Feedback",
-     "SubTitle": "See what my clients and partners say about my work!",
-    "TextIntro": "Every project is unique, and my commitment is to deliver efficient, optimized, and well-structured solutions. See what they say about the experience of working with me.",
+    "SubTitle": "What people say about working with me",
+    "TextIntro": "Feedback from clients and colleagues I've worked with over the years.",
     "Feedbacks": [
       {
         "Name": "Anderson Nascimento",

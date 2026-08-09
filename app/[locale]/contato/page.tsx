@@ -23,7 +23,7 @@ export default function Contato() {
                     href={'https://api.whatsapp.com/send?phone=5521971564659&text='}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Enviar mensagem via WhatsApp"
+                    aria-label={t("WhatsappAria")}
                     className='bg-cinza dark:bg-laranja p-3 rounded-xl w-4/5 lg:w-[40%] lg:text-sm m-auto text-branco dark:text-preto uppercase font-bold tracking-wider flex items-center gap-2 justify-center hover:scale-105 hover:brightness-110 transition-all'
                 >
                     <TiMessages className='text-2xl' />
