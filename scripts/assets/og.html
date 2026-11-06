@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=Inter:wght@400;500&display=swap">
+  <style>
+    html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+    body {
+      position: relative;
+      background-color: #1e1e1e;
+      background-image: radial-gradient(circle, #2c2c2c, #282828, #252525, #212121, #1e1e1e);
+      color: #ededed;
+      font-family: 'Inter', sans-serif;
+    }
+    .hex { position: absolute; right: 70px; top: 50%; width: 470px; height: 470px; transform: translateY(-50%); }
+    .content { position: absolute; left: 96px; top: 50%; transform: translateY(-50%); width: 640px; }
+    .bar { width: 48px; height: 3px; background: #dfa47d; border-radius: 2px; }
+    h1 { margin: 28px 0 0; font-family: 'Antonio', sans-serif; font-weight: 700; font-size: 128px; line-height: 0.95; letter-spacing: 0.01em; }
+    .role { margin: 22px 0 0; font-size: 32px; font-weight: 500; color: #dfa47d; }
+    .value { margin: 14px 0 0; font-size: 22px; line-height: 1.45; color: rgba(237, 237, 237, 0.75); }
+    .url { position: absolute; left: 96px; bottom: 44px; font-family: 'Antonio', sans-serif; font-size: 22px; letter-spacing: 0.08em; color: rgba(237, 237, 237, 0.7); }
+  </style>
+</head>
+<body>
+  <svg class="hex" viewBox="0 0 200 200" aria-hidden="true">
+    <path d="M100 10 L190 55 L190 145 L100 190 L10 145 L10 55 Z" fill="none" stroke="#dfa47d" stroke-width="1.2" stroke-dasharray="150" stroke-dashoffset="40" stroke-linecap="round" />
+  </svg>
+  <div class="content">
+    <div class="bar"></div>
+    <h1>BRUNO<br>FURTADO</h1>
+    <p class="role" id="role"></p>
+    <p class="value" id="value"></p>
+  </div>
+  <div class="url">BRUNODKF.DEV</div>
+  <script>
+    const copy = {
+      en: { role: 'Software Engineer', value: 'Frontend architecture, Design Systems and SaaS applications.' },
+      pt: { role: 'Engenheiro de Software', value: 'Arquitetura frontend, Design Systems e aplicações SaaS.' },
+    };
+    const lang = new URLSearchParams(location.search).get('lang') === 'pt' ? 'pt' : 'en';
+    document.getElementById('role').textContent = copy[lang].role;
+    document.getElementById('value').textContent = copy[lang].value;
+  </script>
+</body>
+</html>

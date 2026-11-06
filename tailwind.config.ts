@@ -1,33 +1,20 @@
 import type { Config } from "tailwindcss";
-const { fontFamily } = require("tailwindcss/defaultTheme");
-const plugin = require("tailwindcss/plugin");
-
-
-/** @type {import('tailwindcss').Config} */
+import defaultTheme from "tailwindcss/defaultTheme";
 
 export default {
-  
-  darkMode: "class", 
+  darkMode: "class",
 
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./context/**/*.{js,ts,jsx,tsx}",
-  ],
-  safelist: [
-    "dark:bg-background-dark",
-    "dark:text-dark",
-    "dark:bg-cinza",
   ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", ...fontFamily.sans],
-        title: ["Antonio", "sans-serif"],
+        sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
+        title: ["var(--font-antonio)", "sans-serif"],
       },
       colors: {
-
         background: {
           DEFAULT: "#f8f9fa",
           dark: "#1e1e1e",
@@ -41,9 +28,14 @@ export default {
         laranja: "#dfa47d",
         creme: "#fffae4",
         laranja2: "#df8e3a",
+        // Darker orange for text on light backgrounds (≥ 4.5:1 on creme).
+        cobre: "#a3561c",
         preto: "#1e1e1e",
         branco: "#ededed",
-        
+
+        // Theme-aware tokens, resolved by CSS variables in globals.css.
+        fg: "rgb(var(--color-fg) / <alpha-value>)",
+        accent: "rgb(var(--color-accent) / <alpha-value>)",
       },
     },
   },

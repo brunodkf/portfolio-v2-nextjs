@@ -1,64 +1,50 @@
-"use client";
+import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
 
-import { useTranslations } from "next-intl";
-import ListaDeHabilidades from "../../components/ListaDeHabilidades";
-import Image from "next/image";
-import { motion } from "framer-motion";
+import { pageMetadata } from '@/lib/metadata';
+import { resolveLocale, type LocaleParams } from '@/lib/params';
+import { SkillList } from '../../components/SkillList';
+import { PageFrame, PageTitle } from '../../components/ui/Page';
+import { Reveal } from '../../components/ui/Reveal';
 
+const cardIcons = ['/icons/coding.webp', '/icons/caneta.webp', '/icons/search.webp'];
 
+export async function generateMetadata({ params }: LocaleParams) {
+  return pageMetadata(await resolveLocale(params), 'about', '/sobre');
+}
 
-export default function Sobre() {
+export default async function Sobre({ params }: LocaleParams) {
+  const locale = await resolveLocale(params);
+  const t = await getTranslations({ locale, namespace: 'About' });
+  const cards = t.raw('Cards') as { title: string; description: string }[];
+  const paragraphs = t.raw('Paragraphs') as string[];
 
-    const t = useTranslations('About')
+  return (
+    <PageFrame className="container px-4 lg:px-0">
+      <PageTitle>{t('Title')}</PageTitle>
 
-    return (
-        <main className="about container w-full h-svh flex lg:items-center justify-center text-branco">
+      <ul className="w-full lg:w-3/4 flex flex-col lg:flex-row items-stretch justify-center my-8 gap-3">
+        {cards.map((card, index) => (
+          <Reveal
+            as="li"
+            key={card.title}
+            duration={0.5 + index * 0.2}
+            className="lg:w-1/3 bg-preto dark:bg-cinza text-branco shadow-lg rounded-md flex flex-col items-center py-8 px-4 text-center hover:shadow-2xl hover:-translate-y-1 transition-[box-shadow,transform] duration-300"
+          >
+            <Image src={cardIcons[index]} width={45} height={45} alt="" />
+            <h2 className="font-medium my-3">{card.title}</h2>
+            <p className="text-sm leading-relaxed text-branco/80">{card.description}</p>
+          </Reveal>
+        ))}
+      </ul>
 
-            <div className="relative w-full h-fit flex flex-col items-center py-32 lg:py-0 ">
+      <div className="w-full lg:w-3/4 max-w-3xl space-y-4 text-preto dark:text-branco leading-relaxed mb-8">
+        {paragraphs.map((paragraph) => (
+          <p key={paragraph.slice(0, 24)}>{paragraph}</p>
+        ))}
+      </div>
 
-                <div className="flex flex-col items-center">
-                    <h1 className={`font-title text-preto dark:text-branco text-3xl`}>{t("Title")}</h1>
-                    <span className="w-10 h-[2px] mt-2 bg-cinza dark:bg-laranja block rounded" />
-                </div>
-
-                <ul className="w-3/4 flex flex-col lg:flex-row items-stretch justify-center my-8 gap-3">
-
-                    <motion.li
-                        className="lg:w-1/3 bg-preto dark:bg-cinza shadow-lg rounded-md flex flex-col items-center justify-between py-8 px-2 text-center hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
-                        initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: .5 }}
-                    >
-                        <Image src={'/icons/coding.webp'} width={45} height={45} alt={t("CardIcon1Alt")} />
-                        <h2 className="font-medium my-3">{t("CardTitle1")}</h2>
-                        <p className="font-thin">{t("CardDescription1")}</p>
-                    </motion.li>
-
-                    <motion.li
-                        className="lg:w-1/3 bg-preto dark:bg-cinza shadow-lg rounded-md flex flex-col items-center justify-between py-8 px-2 text-center hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
-                        initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: .8 }}
-                    >
-                        <Image src={'/icons/caneta.webp'} width={45} height={45} alt={t("CardIcon2Alt")} />
-                        <h2 className="font-medium my-3">{t("CardTitle2")}</h2>
-                        <p className="font-thin">{t("CardDescription2")}</p>
-                    </motion.li>
-
-                    <motion.li
-                        className="lg:w-1/3 bg-preto dark:bg-cinza shadow-lg rounded-md flex flex-col items-center justify-between py-8 px-2 text-center hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
-                        initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 1 }}
-                    >
-                        <Image src={'/icons/search.webp'} width={45} height={45} alt={t("CardIcon3Alt")} />
-                        <h2 className="font-medium my-3">{t("CardTitle3")}</h2>
-                        <p className="font-thin">{t("CardDescription3")}</p>
-                    </motion.li>
-
-                </ul>
-
-                <p className="text-preto dark:text-branco lg:w-3/4 text-center mb-6 p-4 lg:p-0">
-                    {t("Description")}
-                </p>
-
-                <ListaDeHabilidades view='block' />
-
-            </div>
-        </main>
-    )
+      <SkillList />
+    </PageFrame>
+  );
 }

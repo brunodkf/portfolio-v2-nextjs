@@ -1,132 +1,213 @@
 {
   "Metadata": {
-    "Title": "Bruno Furtado — Frontend Engineer",
-    "Description": "Frontend Engineer com mais de 6 anos de experiência em React, Next.js, TypeScript e Svelte. Atuação em aplicações web, Design Systems e arquitetura frontend."
+    "siteTitle": "Bruno Furtado | Engenheiro de Software",
+    "pages": {
+      "home": {
+        "title": "Bruno Furtado | Engenheiro de Software",
+        "description": "Engenheiro de Software com mais de 6 anos construindo e evoluindo produtos web: arquitetura frontend, Design Systems e aplicações SaaS com TypeScript, React, Next.js e SvelteKit."
+      },
+      "about": {
+        "title": "Sobre",
+        "description": "Engenheiro de Software no Rio de Janeiro, atuando com produtos web desde 2019, de uma plataforma DXP corporativa a aplicações SaaS de IA."
+      },
+      "projects": {
+        "title": "Projetos",
+        "description": "Trabalhos de engenharia selecionados: um app financeiro offline-first com decisões de arquitetura documentadas, projetos entregues para clientes e aplicações web independentes."
+      },
+      "experience": {
+        "title": "Experiência",
+        "description": "Experiência em SaaS de IA, produtos editoriais com foco em performance, projetos freelance para clientes e uma plataforma DXP corporativa."
+      },
+      "feedback": {
+        "title": "Depoimentos",
+        "description": "O que clientes e colegas dizem sobre trabalhar com Bruno Furtado."
+      },
+      "contact": {
+        "title": "Contato",
+        "description": "Entre em contato sobre oportunidades em engenharia de software, colaborações, projetos ou conversas técnicas."
+      },
+      "notFound": {
+        "title": "Página não encontrada",
+        "description": "A página que você procura não existe."
+      }
+    }
   },
-  "HomePage": {
-    "Subtitle": "Engenheiro de Software"
+  "Hud": {
+    "skipToContent": "Pular para o conteúdo",
+    "mainNav": "Principal",
+    "socialNav": "Perfis sociais",
+    "logoLabel": "Bruno Furtado, página inicial",
+    "switchLanguage": "Mudar idioma para {language}",
+    "darkTheme": "Tema escuro",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "visitProfile": "Visitar perfil no {name}",
+    "newTab": "(abre em nova aba)",
+    "pdfNewTab": "(PDF, abre em nova aba)",
+    "skills": "Principais tecnologias"
   },
-  "Navbar": {
+  "Navigation": {
     "home": "Início",
     "about": "Sobre",
     "projects": "Projetos",
-    "resume": "Resumo",
+    "resume": "Currículo",
     "experience": "Experiência",
-    "contact": "Contato",
     "feedback": "Depoimentos",
-    "goTo": "Ir para"
+    "contact": "Contato"
+  },
+  "HomePage": {
+    "role": "Engenheiro de Software"
   },
   "About": {
     "Title": "Sobre",
-    "CardTitle1": "Aplicações Web",
-    "CardDescription1": "Construção e evolução de aplicações web reais, do zero e em bases de código existentes.",
-    "CardIcon1Alt": "Ícone de desenvolvimento de aplicações",
-    "CardTitle2": "Design Systems",
-    "CardDescription2": "Componentização, consistência visual e evolução de bibliotecas de UI em produtos reais.",
-    "CardIcon2Alt": "Ícone de Design Systems e componentização",
-    "CardTitle3": "Performance & Qualidade",
-    "CardDescription3": "Web Vitals, acessibilidade e boas práticas de SEO técnico no dia a dia.",
-    "CardIcon3Alt": "Ícone de performance e qualidade",
-    "Description": "Atuo com frontend desde 2019, com passagens por plataformas corporativas, produtos de conversão e, atualmente, aplicações de IA em ambiente SaaS. Tenho forte experiência com React e Next.js, e hoje trabalho também com Svelte e SvelteKit no dia a dia — não como algo pontual, mas como parte real da minha stack. Grande parte do meu trabalho recente está ligada a Design Systems: evoluir bibliotecas de componentes, manter consistência entre times e equilibrar decisões de arquitetura com a experiência do usuário. Gosto de entrar em bases de código existentes, entender o que já foi construído e evoluir o produto sem comprometer o que já funciona."
-  },
-  "Projects": {
-    "Title": "Projetos",
-    "Button": "Confira",
-    "ScreenshotAlt": "Screenshot do projeto {name}",
-    "List": [
+    "Cards": [
       {
-        "name": "StartCrypto",
-        "description": "Site de vendas para curso de criptomoedas, com foco em conversão.",
-        "stacks": "React | Next.js | TailwindCSS | TypeScript"
+        "title": "Engenharia de Produto",
+        "description": "Construção e evolução de aplicações web de ponta a ponta: formulários complexos, fluxos assíncronos, integração com APIs REST e gerenciamento de estado."
       },
       {
-        "name": "LA Medic Rio",
-        "description": "Site institucional para distribuidora de equipamentos médicos, com foco em credibilidade e SEO local.",
-        "stacks": "HTML | Sass | JavaScript"
+        "title": "Arquitetura Frontend & Design Systems",
+        "description": "Bibliotecas de componentes, convenções compartilhadas e refatoração que mantêm produtos consistentes e manuteníveis entre times."
       },
       {
-        "name": "Streaming APP",
-        "description": "Interface de streaming construída para explorar componentização em React.",
-        "stacks": "React | Tailwind CSS | JavaScript"
-      },
-      {
-        "name": "NewLife Fitness",
-        "description": "Site institucional para academia, com informações de planos e modalidades.",
-        "stacks": "HTML | Sass | JavaScript"
+        "title": "Performance & Qualidade",
+        "description": "Core Web Vitals, acessibilidade, SEO técnico e code review como parte do dia a dia."
       }
+    ],
+    "Paragraphs": [
+      "Sou Engenheiro de Software no Rio de Janeiro e atuo com produtos web desde 2019. Minha trajetória passa por uma plataforma DXP corporativa na Lumis, por produtos com foco em performance e conversão na H&W Publishing e por projetos freelance para clientes de diferentes segmentos, até aplicações SaaS de IA na Begen.",
+      "Grande parte do meu trabalho está onde a engenharia de software encontra a interface: arquitetura frontend, Design Systems e a lógica de produto por trás de cada tela. Trabalho diariamente com TypeScript, React, Next.js, Svelte e SvelteKit, em colaboração próxima com Product Design, Backend e QA.",
+      "Gosto de entrar em bases de código existentes: entender o que já foi construído, refatorar com cuidado e evoluir o produto sem comprometer o que funciona. Em projetos independentes, exploro decisões de arquitetura de ponta a ponta, como um app financeiro offline-first com ADRs documentados."
     ]
   },
   "Experience": {
     "Title": "Experiência",
-    "Job": "Responsabilidades",
+    "Highlights": "Principais contribuições",
+    "Stack": "Stack",
     "Experiences": [
       {
-        "Title": "Begen",
-        "Position": "Frontend Engineer Pleno",
-        "Date": "2026 – Presente",
-        "Description": "Desenvolvimento de aplicações web em SvelteKit para produtos de IA em ambiente SaaS, com foco em código manutenível e evolução de um Design System em produção.",
-        "Responsibilities": [
-          "Evolução do Design System interno (OCC): migração e padronização de componentes para ampliar consistência visual e reduzir esforço de manutenção entre times.",
-          "Desenvolvimento do sistema de Media Plan para mídia digital — CRUDs, formulários complexos, validações, polling e fluxos assíncronos integrados a APIs REST.",
-          "Criação de componentes reutilizáveis e refatoração de código legado, elevando a qualidade da arquitetura frontend.",
-          "Gerenciamento de estado com Svelte 5 (runes) e integração com APIs REST.",
-          "Colaboração direta com Product Designers, Backend e QA na definição de fluxos e resolução de bugs complexos.",
-          "Revisão de código e adoção de boas práticas para sustentar performance e consistência do produto."
+        "Company": "Begen",
+        "Role": "Frontend Engineer · Pleno",
+        "Period": "2026 – Presente",
+        "Location": "Remoto",
+        "Summary": "Responsável pelo desenvolvimento e evolução de aplicações SaaS com SvelteKit, Svelte 5 e TypeScript.",
+        "Highlights": [
+          "Contribuição na criação e evolução de um Design System reutilizável, com foco em arquitetura de componentes, consistência e escalabilidade.",
+          "Desenvolvimento de interfaces complexas e componentes reutilizáveis, priorizando manutenibilidade e performance.",
+          "Integração de aplicações frontend com APIs REST, implementando fluxos assíncronos, sincronização de dados e gerenciamento de estado.",
+          "Aplicação de práticas modernas de arquitetura frontend para melhorar a organização do código e a consistência da aplicação.",
+          "Participação em code reviews e colaboração com engenheiros de backend, designers e QA na entrega de melhorias do produto."
+        ],
+        "Stack": [
+          "SvelteKit",
+          "Svelte 5",
+          "TypeScript",
+          "Bun",
+          "UnoCSS",
+          "REST APIs"
         ]
       },
       {
-        "Title": "H&W Publishing",
-        "Position": "Frontend Developer",
-        "Date": "2025 – 2026",
-        "Description": "Desenvolvimento e manutenção de aplicações web em Next.js, React e TypeScript, com foco em performance, SEO técnico e conversão.",
-        "Responsibilities": [
+        "Company": "H&W Publishing",
+        "Role": "Frontend Developer",
+        "Period": "2025 – 2026",
+        "Location": "Wilmington, DE – EUA (Remoto)",
+        "Summary": "Desenvolvimento e manutenção de aplicações web em Next.js, React e TypeScript, com foco em performance, SEO técnico e conversão.",
+        "Highlights": [
           "Desenvolvimento e manutenção de aplicações em Next.js, React e TypeScript, com foco em componentização e reaproveitamento de código.",
           "Otimização de performance e Core Web Vitals, mantendo pontuações Lighthouse acima de 80 em performance, acessibilidade e SEO.",
-          "Implementação de SEO técnico on-page e boas práticas de acessibilidade.",
-          "Construção de interfaces responsivas e de alta conversão, traduzindo requisitos de negócio em produtos consistentes entre dispositivos.",
+          "Implementação de SEO técnico on-page e boas práticas de acessibilidade para ampliar o alcance orgânico e garantir experiências inclusivas.",
+          "Construção de interfaces responsivas e de alta conversão, traduzindo requisitos de negócio em produtos rápidos e consistentes entre dispositivos.",
           "Aplicação de A/B testing e CRO para embasar decisões de UX orientadas a dados."
+        ],
+        "Stack": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "JavaScript",
+          "SEO",
+          "Performance"
         ]
       },
       {
-        "Title": "Freelancer",
-        "Position": "Desenvolvedor Web",
-        "Date": "2020 – Presente",
-        "Description": "Responsável pelo ciclo completo de projetos web para clientes de segmentos variados, da arquitetura ao deploy e manutenção.",
-        "Responsibilities": [
-          "Responsável pelo ciclo completo de projetos — levantamento de requisitos, arquitetura, desenvolvimento, deploy e manutenção — com React, Next.js e TypeScript.",
+        "Company": "Freelancer",
+        "Role": "Desenvolvedor Web",
+        "Period": "2020 – Presente",
+        "Location": "Rio de Janeiro, RJ",
+        "Summary": "Responsável pelo ciclo completo de projetos web para clientes de segmentos variados, do levantamento de requisitos e arquitetura ao deploy e manutenção.",
+        "Highlights": [
+          "Responsável pelo ciclo completo de projetos (levantamento de requisitos, arquitetura, desenvolvimento, deploy e manutenção) com React, Next.js e TypeScript.",
           "Entrega de mais de 20 projetos para segmentos variados (educação, cripto e institucional), adaptando arquitetura e stack a cada contexto de negócio.",
-          "Desenvolvimento de plataforma com área de membros e dashboard para gestão de conteúdo, integrando frontend a APIs REST e fluxos de autenticação.",
+          "Desenvolvimento de plataforma com área de membros e dashboard para gestão de conteúdo, integrando o frontend a APIs REST e fluxos de autenticação.",
           "Foco em performance, responsividade e SEO para maximizar conversão e alcance dos produtos entregues."
+        ],
+        "Stack": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS"
         ]
       },
       {
-        "Title": "Lumis",
-        "Position": "Desenvolvedor Web Front End · Estágio → Efetivo",
-        "Date": "2021 – 2023",
-        "Description": "Desenvolvimento de interfaces responsivas e acessíveis para uma plataforma DXP corporativa, com progressão de estagiário a efetivo ao longo do período.",
-        "Responsibilities": [
-          "Desenvolvimento de interfaces responsivas e acessíveis com HTML5, CSS3, SASS e JavaScript em plataforma DXP corporativa.",
+        "Company": "Lumis",
+        "Role": "Desenvolvedor Web Front End · Estágio → Efetivo",
+        "Period": "2021 – 2023",
+        "Location": "Rio de Janeiro, RJ",
+        "Summary": "Desenvolvimento de interfaces responsivas e acessíveis para uma plataforma DXP corporativa, com progressão de estagiário a efetivo.",
+        "Highlights": [
+          "Desenvolvimento de interfaces responsivas e acessíveis com HTML5, CSS3, Sass e JavaScript em plataforma DXP corporativa.",
           "Criação e manutenção de biblioteca de componentes reutilizáveis, acelerando novas demandas e padronizando a identidade visual.",
           "Implementação de SEO on-page e conformidade com acessibilidade (WCAG), melhorando indexação e alcance orgânico.",
           "Colaboração com equipes multidisciplinares na tradução de designs UX/UI em produtos centrados no usuário, incluindo integração com HubSpot CRM para captura de leads."
+        ],
+        "Stack": [
+          "HTML5",
+          "CSS3",
+          "Sass",
+          "JavaScript",
+          "DXP"
         ]
       }
     ]
   },
-  "Contact": {
-    "Title": "Contato",
-    "Text1": "Tem um projeto em mente ou precisa de um Frontend Engineer para o time? Vamos conversar.",
-    "Button": "Me envie uma mensagem",
-    "Text2": "Estou à disposição para conversar sobre o projeto e entender como posso ajudar.",
-    "WhatsappAria": "Enviar mensagem via WhatsApp"
-  },
-  "SocialLateral": {
-    "VisitProfile": "Visitar perfil no {name}"
+  "Projects": {
+    "Title": "Projetos",
+    "Eyebrow": "Trabalhos selecionados",
+    "Intro": "Produtos independentes e projetos entregues para clientes, com o contexto, a arquitetura e as decisões de engenharia por trás de cada um.",
+    "Featured": "Projetos em destaque",
+    "Selected": "Outros projetos",
+    "ReadCaseStudy": "Ler estudo de caso",
+    "LiveSite": "Site publicado",
+    "SourceCode": "Código-fonte",
+    "AllProjects": "Todos os projetos",
+    "NextProject": "Próximo estudo de caso",
+    "Sections": {
+      "category": "Categoria",
+      "period": "Período",
+      "role": "Papel",
+      "context": "Contexto",
+      "approach": "Abordagem",
+      "architecture": "Arquitetura",
+      "decisions": "Decisões principais",
+      "decision": "Decisão",
+      "quality": "Qualidade",
+      "status": "Status",
+      "implemented": "Implementado",
+      "planned": "Planejado",
+      "outcome": "Resultado",
+      "stack": "Stack",
+      "links": "Links"
+    }
   },
   "Feedback": {
     "Title": "Depoimentos",
     "SubTitle": "O que dizem sobre trabalhar comigo",
     "TextIntro": "Depoimentos de clientes e colegas com quem trabalhei ao longo dos projetos.",
+    "Carousel": "Depoimentos",
+    "Previous": "Depoimento anterior",
+    "Next": "Próximo depoimento",
+    "SlideLabel": "{index} de {total}",
+    "GoTo": "Ir para o depoimento {index}",
     "Feedbacks": [
       {
         "Name": "Anderson Nascimento",
@@ -142,7 +223,6 @@
         "Name": "Thayane Fabiano",
         "Position": "UX UI Designer | Product Designer",
         "Text": "Trabalhar com o Bruno na Lumis me ajudou muito a entender mais sobre desenvolvimento e me tornar uma designer melhor. Sua disposição de aprender, colaborar e dedicação para entregar o melhor resultado possível causaram uma excelente impressão em mim."
-
       },
       {
         "Name": "Luis Fernando",
@@ -160,5 +240,21 @@
         "Text": "Tive o prazer de trabalhar com o Bruno quando ele atuava no time de Marketing da Lumis. Bruno sempre foi muito solícito e mostrava domínio sobre o que fazia e falava. Com ele, conseguia compreender melhor sobre desenvolvimento e sobre como a nossa área trabalhava em conjunto."
       }
     ]
+  },
+  "Contact": {
+    "Title": "Contato",
+    "Lead": "Aberto a oportunidades em engenharia de software, colaborações, projetos e conversas técnicas.",
+    "Text": "O email é o melhor canal para oportunidades e detalhes de projetos. LinkedIn e WhatsApp também funcionam.",
+    "Email": "Enviar um email",
+    "LinkedIn": "LinkedIn",
+    "WhatsApp": "WhatsApp",
+    "WhatsappAria": "Enviar mensagem via WhatsApp (abre em nova aba)",
+    "LinkedInAria": "Conectar no LinkedIn (abre em nova aba)",
+    "Resume": "Baixar currículo (PDF)"
+  },
+  "NotFound": {
+    "Title": "Página não encontrada",
+    "Text": "Esta página não existe ou foi movida.",
+    "Back": "Voltar ao início"
   }
 }

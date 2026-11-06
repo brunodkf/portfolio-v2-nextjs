@@ -1,38 +1,63 @@
-"use client";
+import { getTranslations } from 'next-intl/server';
+import { FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
+import { HiOutlineDocumentArrowDown } from 'react-icons/hi2';
+import { TiMessages } from 'react-icons/ti';
 
-import Link from 'next/link';
-import { useTranslations } from "next-intl";
-import { TiMessages } from "react-icons/ti";
+import { resumePath, siteConfig } from '@/config/site';
+import { pageMetadata } from '@/lib/metadata';
+import { resolveLocale, type LocaleParams } from '@/lib/params';
+import { PageFrame, PageTitle } from '../../components/ui/Page';
 
-export default function Contato() {
+export async function generateMetadata({ params }: LocaleParams) {
+    return pageMetadata(await resolveLocale(params), 'contact', '/contato');
+}
 
-    const t = useTranslations('Contact');
+const secondary = 'flex items-center justify-center gap-2 rounded-xl border border-cinza/40 dark:border-laranja/60 px-4 py-3 text-sm font-bold uppercase tracking-wider transition-colors hover:bg-cinza hover:text-branco dark:hover:bg-laranja dark:hover:text-preto';
+
+export default async function Contato({ params }: LocaleParams) {
+    const locale = await resolveLocale(params);
+    const t = await getTranslations({ locale, namespace: 'Contact' });
 
     return (
-        <main className="contact container w-full h-svh flex flex-col lg:items-center lg:justify-center text-preto dark:text-branco">
+        <PageFrame className="container px-4 lg:px-0 text-preto dark:text-branco">
+            <PageTitle>{t('Title')}</PageTitle>
 
-            <div className="flex flex-col items-center pt-32 lg:pt-0 lg:pb-3">
-                <h1 className={`font-title text-3xl`}>{t("Title")}</h1>
-                <span className="w-10 h-[2px] my-2 bg-cinza dark:bg-laranja block rounded" />
-            </div>
+            <div className="w-full lg:w-3/4 max-w-2xl flex flex-col items-center text-center">
+                <p className="pt-6 text-xl leading-relaxed">{t('Lead')}</p>
+                <p className="pt-3 pb-8 text-sm leading-relaxed text-preto/75 dark:text-branco/75">{t('Text')}</p>
 
-            <div className="lg:w-3/4 flex flex-col justify-center text-center">
-                <p className='py-8 text-xl lg:py-4'>{t("Text1")}</p>
+                <a
+                    href={`mailto:${siteConfig.email}`}
+                    className="w-full sm:w-4/5 lg:w-3/5 bg-cinza dark:bg-laranja p-3 rounded-xl text-branco dark:text-preto uppercase font-bold tracking-wider flex flex-col items-center justify-center hover:brightness-110 transition-[filter]"
+                >
+                    <span className="flex items-center gap-2 text-sm">
+                        <TiMessages aria-hidden="true" className="text-2xl" />
+                        {t('Email')}
+                    </span>
+                    <span className="mt-0.5 text-xs font-medium normal-case tracking-normal opacity-80">{siteConfig.email}</span>
+                </a>
 
-                <Link
-                    href={'https://api.whatsapp.com/send?phone=5521971564659&text='}
+                <div className="mt-3 grid w-full sm:w-4/5 lg:w-3/5 grid-cols-2 gap-3">
+                    <a href={siteConfig.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label={t('LinkedInAria')} className={secondary}>
+                        <FaLinkedinIn aria-hidden="true" className="text-lg" />
+                        {t('LinkedIn')}
+                    </a>
+                    <a href={siteConfig.social.whatsapp} target="_blank" rel="noopener noreferrer" aria-label={t('WhatsappAria')} className={secondary}>
+                        <FaWhatsapp aria-hidden="true" className="text-lg" />
+                        {t('WhatsApp')}
+                    </a>
+                </div>
+
+                <a
+                    href={resumePath[locale]}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={t("WhatsappAria")}
-                    className='bg-cinza dark:bg-laranja p-3 rounded-xl w-4/5 lg:w-[40%] lg:text-sm m-auto text-branco dark:text-preto uppercase font-bold tracking-wider flex items-center gap-2 justify-center hover:scale-105 hover:brightness-110 transition-all'
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cobre dark:text-laranja underline-offset-4 hover:underline"
                 >
-                    <TiMessages className='text-2xl' />
-                    <p>{t("Button")}</p>
-                </Link>
-
-                <p className='py-8 text-xl lg:py-4'>{t("Text2")}</p>
+                    <HiOutlineDocumentArrowDown aria-hidden="true" className="text-lg" />
+                    {t('Resume')}
+                </a>
             </div>
-
-        </main>
-    )
+        </PageFrame>
+    );
 }

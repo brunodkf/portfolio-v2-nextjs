@@ -1,50 +1,65 @@
-"use client";
+import { getTranslations } from 'next-intl/server';
 
-import { useTranslations } from "next-intl";
+import { pageMetadata } from '@/lib/metadata';
+import { resolveLocale, type LocaleParams } from '@/lib/params';
+import { PageFrame, PageTitle } from '../../components/ui/Page';
+import { TechList } from '../../components/ui/TechList';
 
 interface ExperienceItem {
-    Title: string;
-    Position: string;
-    Date: string;
-    Description: string;
-    Responsibilities: string[];
+    Company: string;
+    Role: string;
+    Period: string;
+    Location: string;
+    Summary: string;
+    Highlights: string[];
+    Stack: string[];
 }
 
-export default function Experiencia() {
+export async function generateMetadata({ params }: LocaleParams) {
+    return pageMetadata(await resolveLocale(params), 'experience', '/experiencia');
+}
 
-    const t = useTranslations('Experience');
-
-    const experiences: ExperienceItem[] = t.raw('Experiences');
+export default async function Experiencia({ params }: LocaleParams) {
+    const locale = await resolveLocale(params);
+    const t = await getTranslations({ locale, namespace: 'Experience' });
+    const experiences = t.raw('Experiences') as ExperienceItem[];
 
     return (
-        <main className="experience container w-full h-svh flex flex-col lg:items-center lg:justify-center text-preto dark:text-branco">
-            <div className="flex flex-col items-center pt-32 lg:pt-0 lg:pb-3">
-                <h1 className={`font-title text-3xl`}>{t("Title")}</h1>
-                <span className="w-10 h-[2px] my-2 bg-cinza dark:bg-laranja block rounded" />
-            </div>
+        <PageFrame className="container text-preto dark:text-branco">
+            <PageTitle>{t('Title')}</PageTitle>
 
-            <div className="w-full lg:w-3/4 pb-32 lg:pb-0 lg:max-h-[calc(100vh-12rem)] lg:overflow-y-auto custom-scrollbar lg:dark:bg-cinza lg:rounded-md">
-                <ul>
-                    {experiences.map((exp, index) => (
-                        <li key={index} className="mt-4 p-4">
-                            <h3 className="font-title text-preto dark:text-laranja text-2xl">{exp.Title}</h3>
-                            <p className="font-semibold text-sm text-preto/80 dark:text-branco/90 mt-1">{exp.Position}</p>
-                            <p className="text-xs text-preto/50 dark:text-branco/50 mt-0.5 font-mono tracking-wide">{exp.Date}</p>
-                            <p className="mt-3 text-sm leading-relaxed">{exp.Description}</p>
+            <ol className="w-full lg:w-3/4 mt-4 lg:dark:bg-cinza lg:rounded-md">
+                {experiences.map((exp) => (
+                    <li key={exp.Company} className="p-4 lg:p-6 border-b last:border-b-0 border-preto/10 dark:border-branco/10">
+                        <article>
+                            <header className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+                                <div>
+                                    <h2 className="font-title text-preto dark:text-laranja text-2xl">{exp.Company}</h2>
+                                    <p className="font-semibold text-sm text-preto/80 dark:text-branco/90 mt-1">{exp.Role}</p>
+                                </div>
+                                <p className="text-xs text-preto/60 dark:text-branco/60 font-mono tracking-wide sm:text-right">
+                                    {exp.Period}
+                                    <span className="block">{exp.Location}</span>
+                                </p>
+                            </header>
 
-                            <p className="mt-3 font-bold text-preto dark:text-laranja text-sm">{t("Job")}:</p>
-                            <ul className="mt-1 space-y-1.5">
-                                {exp.Responsibilities.map((resp, i) => (
-                                    <li key={i} className="flex items-start gap-2 text-sm">
-                                        <span className="text-laranja mt-0.5 shrink-0 leading-none">▸</span>
-                                        <span>{resp}</span>
+                            <p className="mt-3 text-sm leading-relaxed">{exp.Summary}</p>
+
+                            <h3 className="mt-4 font-bold text-cobre dark:text-laranja text-sm">{t('Highlights')}</h3>
+                            <ul className="mt-2 space-y-1.5">
+                                {exp.Highlights.map((item) => (
+                                    <li key={item.slice(0, 32)} className="flex items-start gap-2 text-sm leading-relaxed">
+                                        <span aria-hidden="true" className="text-cobre dark:text-laranja mt-0.5 shrink-0 leading-none">▸</span>
+                                        <span>{item}</span>
                                     </li>
                                 ))}
                             </ul>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        </main>
-    )
+
+                            <TechList items={exp.Stack} label={t('Stack')} className="mt-4" />
+                        </article>
+                    </li>
+                ))}
+            </ol>
+        </PageFrame>
+    );
 }

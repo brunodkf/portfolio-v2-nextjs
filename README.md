@@ -1,60 +1,51 @@
-# Portfólio Pessoal 
+# Bruno Furtado: Portfolio
 
-Este é o meu portfólio pessoal desenvolvido para apresentar minhas habilidades, experiências e projetos como desenvolvedor Frontend.
+Personal portfolio of Bruno Furtado, Software Engineer. Live at [brunodkf.dev](https://brunodkf.dev).
 
-![Captura de tela 2025-03-18 011539](https://github.com/user-attachments/assets/c85b0b97-32af-43a7-b890-cb4edd98926a)
+## Stack
 
+- **Next.js 16** (App Router, static generation for every page)
+- **React 19** + **TypeScript** (strict)
+- **next-intl**: Portuguese (`/pt`, default) and English (`/en`)
+- **Tailwind CSS**: design tokens in `tailwind.config.ts` and `app/[locale]/globals.css`
+- **Framer Motion** (animations, respecting `prefers-reduced-motion`) and **Swiper** (testimonials carousel)
 
-## Tecnologias Utilizadas
+## Running
 
-- **Next.js 15**
-- **React.js**
-- **TailwindCSS**
-- **Framer Motion** (para animações)
-- **TypeScript**
-
-## Funcionalidades
-
-- **Apresentação do Perfil Profissional**: Informações sobre minha experiência, formação e habilidades.
-- **Seção de Projetos**: Exibe meus principais projetos com detalhes sobre tecnologias e soluções aplicadas.
-- **Links para Redes e Contatos**: Facilita o acesso ao meu GitHub, LinkedIn e outras plataformas.
-- **Design Responsivo**: Interface adaptável para dispositivos móveis e desktop.
-
-## Como Executar o Projeto
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/brunodkf/portfolio.git
-   ```
-2. Acesse o diretório do projeto:
-   ```bash
-   cd portfolio
-   ```
-3. Instale as dependências:
-   ```bash
-   npm install
-   ```
-4. Execute o projeto:
-   ```bash
-   npm run dev
-   ```
-5. Acesse no navegador: `http://localhost:3000`
-
-## Estrutura do Projeto
-
-```
-/app
- |-- [locale]   // Páginas principais
- |-- components   // Componentes reutilizáveis
-/src
- |-- context   // Context theme
- |-- i18n   // Internacionalização
-
+```bash
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # production build
+npm run check      # TypeScript + ESLint
+npm run assets     # regenerate résumé PDFs and Open Graph images (needs local Chrome; CHROME_PATH to override)
 ```
 
+## Structure
 
-## Contato
+```
+app/
+  [locale]/            pages (home, sobre, projetos, projetos/[slug], experiencia, depoimentos, contato, 404)
+  components/
+    hud/               the HUD: top navigation, side rails, mobile drawer, footer, decorative hexagons
+    projects/          showcase blocks, device frames, architecture diagram
+    ui/                shared page primitives (PageFrame, Reveal, TechList)
+  sitemap.ts, robots.ts
+messages/              UI copy per locale (pt.json / en.json must keep the same shape, checked by tsc)
+src/
+  config/              site constants, navigation (single source of truth for the HUD)
+  content/projects.ts  project data and case studies (verifiable facts only)
+  i18n/                next-intl routing and request config
+  lib/                 metadata helpers, theme persistence
+scripts/
+  assets/              HTML sources for the résumé (PT/EN) and Open Graph images
+  render-static-assets.mjs
+```
+
+## Content rules
+
+Everything published about Bruno must be true and verifiable (public code, repository docs, live sites or existing testimonials). Do not add metrics, clients or responsibilities without evidence, and never publish confidential work.
+
+## Contact
 
 - [LinkedIn](https://www.linkedin.com/in/brunodkf)
 - [GitHub](https://github.com/brunodkf)
-
